@@ -139,8 +139,12 @@ class Game:
         }
         
         # Prepositions that often indicate PRSI
-        self.prepositions = { "with", "using", "at", "in", "on", "into", "from", "to",
-                             "towards"
+        self.prepositions = { "with", "using", "at", "in", "on", "into", "onto", "from",
+                             "to", "towards", "through", "across", "under", "over", "by",
+                             "near", "beside", "behind", "around", "past", "within",
+                             "inside", "outside", "off", "above", "below", "beneath",
+                             "against", "between", "among", "along", "beyond", "before",
+                             "after"
         }
         
         self.adjectives = { "up", "upper", "upward", "north", "northern", "down",
@@ -156,19 +160,257 @@ class Game:
         
         # Objects
         self.objects = { "room", "area", "space", "zone", "region", "section", "chamber",
-                        "place", "spot", "location", "sector", "exit", "map", "chart",
-                        "layout", "diagram", "guide", "grid", "dungeon", "terrain",
+                        "place", "spot", "location", "sector", 
+                        "door", "exit", "entrance", "passage", "threshold", "opening", "doorway", "corridor", "entryway", "gateway", "entranceway",
+                        "map", "chart", "layout", "diagram", "guide", "grid", "dungeon", "terrain",
                         "atlas", "scroll", "parchment", "pathfinder", "schematic",
                         "overlay", "chest", "box", "crate", "container", "case", "stash", "strongbox",
                                   "cache", "trove",
                         "potion", "item", "flask", "vial", "tonic", "brew", "tincture", "essence", "elixir",
-                        "sword", "blade", "steel", "brand"
+                        "sword", "blade", "steel", "brand",
+                        "monster", "beast", "creature", "abomination", "terror", "aberration", "monstrosity", "warbeast",
+                        "enemy", "fiend", "brute", "foe", "adversary", "threat", "assailant", "opponent", "challenger",
+                        "inventory", "equipment", "content", "bag", "belongings", "pouch"
         }
         
         self.dictionary = {
-            "movement": ["move", "go", "head", "navigate", "advance", "take", "enter",
-                         "traverse", "proceed", "step", "walk", "venture", "progress",
-                         "veer", "approach"],
+                "move": ["movement"],
+                "go": ["movement"],
+                "head": ["movement"],
+                "navigate": ["movement"],
+                "advance": ["movement"],
+                "take": ["movement"],
+                "enter": ["movement"],
+                "traverse": ["movement"],
+                "proceed": ["movement"],
+                "step": ["movement"],
+                "walk": ["movement"],
+                "venture": ["movement"],
+                "progress": ["movement"],
+                "veer": ["movement"],
+                "approach": ["movement"],
+                
+                "direction": ["up", "down", "left", "right"],
+                
+                "up": ["up"],
+                "upper": ["up"],
+                "upward": ["up"],
+                "north": ["up"],
+                "northern": ["up"],
+    
+                "down": ["down", "drink"],
+                "lower": ["down"],
+                "downward": ["down"],
+                "south": ["down"],
+                "southern": ["down"],
+
+                "left": ["left"],
+                "leftward": ["left"],
+                "west": ["left"],
+                "western": ["left"],
+        
+                "right": ["right"],
+                "rightward": ["right"],
+                "east": ["right"],
+                "eastern": ["right"],
+                
+                "room": ["room"],
+                "area": ["room"],
+                "space": ["room"],
+                "zone": ["room"],
+                "region": ["room"],
+                "section": ["room"],
+                "chamber": ["room"],
+                "place": ["room"],
+                "spot": ["room"],
+                "location": ["room"],
+                "sector": ["room"],
+                
+                "door": ["door"],
+                "exit": ["door"],
+                "entrance": ["door"],
+                "passage": ["door"],
+                "threshold": ["door"],
+                "opening": ["door"],
+                "doorway": ["door"],
+                "corridor": ["door"],
+                "entryway": ["door"],
+                "gateway": ["door"],
+                "entranceway": ["door"],
+                
+                "next": ["next"],
+                "adjacent": ["next"],
+                "following": ["next"],
+                "neighboring": ["next"],
+                "ahead": ["next"],
+                "upcoming": ["next"],
+                "subsequent": ["next"],
+                "succeeding": ["next"],
+                "other": ["next"],
+                "ensuing": ["next"],
+                "imminent": ["next"],
+                "forthcoming": ["next"],
+                "approaching": ["next"],
+                "adjoining": ["next"],
+                "forward": ["next"],
+                
+                "look": ["look", "show"],
+                "check": ["look", "show"],
+                "view": ["look", "show"],
+                "inspect": ["look"],
+                "study": ["look"],
+                "examine": ["look", "show"],
+                "consult": ["look"],
+                "browse": ["look"],
+                "glance": ["look"],
+                "scan": ["look"],
+                "observe": ["look"],
+                "survey": ["look"],
+                "gaze": ["look"],
+                "peek": ["look"],
+                "behold": ["look"],
+                "glimpse": ["look", "open"],
+                "eye": ["look"],
+                "show": ["look", "show"],
+                "display": ["look", "show"],
+                
+                "map": ["map"],
+                "chart": ["map"],
+                "layout": ["map"],
+                "diagram": ["map"],
+                "guide": ["map"],
+                "grid": ["map"],
+                "dungeon": ["map"],
+                "terrain": ["map"],
+                "atlas": ["map"],
+                "scroll": ["map"],
+                "parchment": ["map"],
+                "pathfinder": ["map"],
+                "schematic": ["map"],
+                "overlay": ["map"],
+                
+                "open": ["open"],
+                "unseal": ["open"],
+                "pop": ["open"],
+                "access": ["open"],
+                "uncover": ["open"],
+                "reveal": ["open"],
+                "unveil": ["open"],
+                "search": ["open"],
+                "rifle": ["open"],
+                "dig": ["open"],
+                "investigate": ["open"],
+                "explore": ["open"],
+                "audit": ["open"],
+                
+                "chest": ["chest"],
+                "box": ["chest"],
+                "crate": ["chest"],
+                "container": ["chest"],
+                "case": ["chest"],
+                "stash": ["chest"],
+                "strongbox": ["chest"],
+                "cache": ["chest"],
+                "trove": ["chest"],
+                
+                "use": ["use"],
+                "take": ["use"],
+                "apply": ["use"],
+                "activate": ["use"],
+                "employ": ["use"],
+                "cast": ["use"],
+                "utilize": ["use"],
+                
+                "drink": ["drink"],
+                "consume": ["drink"],
+                "swallow": ["drink"],
+                "guzzle": ["drink"],
+                "imbibe": ["drink"],
+                "ingest": ["drink"],
+                "chug": ["drink"],
+                
+                "health": ["health", "healing"],
+                "healing": ["healing"],
+                "restorative": ["healing"],
+                "recovery": ["healing"],
+                "cure": ["healing"],
+                "rejuvenation": ["healing"],
+                "herbal": ["healing"],
+                "renewal": ["healing"],
+
+                "strength": ["strength"],
+                "might": ["strength"],
+                "power": ["strength"],
+                "brawn": ["strength"],
+                "force": ["strength"],
+                "muscle": ["strength"],
+
+                "potion": ["potion"],
+                "item": ["potion", "inventory"],
+                "flask": ["potion"],
+                "vial": ["potion"],
+                "tonic": ["potion"],
+                "brew": ["potion"],
+                "tincture": ["potion"],
+                "essence": ["potion"],
+                "elixir": ["potion"],
+                
+                "attack": ["attack"],
+                "strike": ["attack"],
+                "cut": ["attack"],
+                "damage": ["attack"],
+                "swing": ["attack"],
+                "slash": ["attack"],
+                "slice": ["attack"],
+                "unleash": ["attack"],
+                "hit": ["attack"],
+                "fight": ["attack"],
+                
+                "weapon": ["sword"],
+                
+                "sword": ["weapon"],
+                "blade": ["weapon"],
+                "steel": ["weapon"],
+                "brand": ["weapon"],
+
+                "run": ["run"],
+                "escape": ["run"],
+                "retreat": ["run"],
+                "flee": ["run"],
+                "dash": ["run"],
+                "withdraw": ["run"],
+                
+                "monster": ["monster"],
+                "beast": ["monster"],
+                "creature": ["monster"],
+                "abomination": ["monster"],
+                "terror": ["monster"],
+                "aberration": ["monster"],
+                "monstrosity": ["monster"],
+                "warbeast": ["monster"],
+                
+                "enemy": ["enemy"],
+                "fiend": ["enemy"],
+                "brute": ["enemy"],
+                "foe": ["enemy"],
+                "adversary": ["enemy"],
+                "threat": ["enemy"],
+                "assailant": ["enemy"],
+                "opponent": ["enemy"],
+                "challenger": ["enemy"],
+                
+                "inventory": ["inventory"],
+                "equipment": ["inventory"],
+                "content": ["inventory"],
+                "bag": ["inventory"],
+                "belongings": ["inventory"],
+                "pouch": ["inventory"]
+                
+                #"withdraw": ["run"]
+            }
+        
+        """
+        self.dictionary = {
             "directions": {"up": ["up", "upper", "upward", "north", "northern"],
                            "down": ["down", "lower", "downward", "south", "southern"],
                            "left": ["left", "leftward", "west", "western"],
@@ -204,6 +446,7 @@ class Game:
             
             #"potion": ["potion"]
         }
+        """
         
         """
         #actions (verbs)
@@ -248,7 +491,7 @@ class Game:
         matrix[4][4].contents = Monster(Weapon("Steel Sword", 20, 40, 0.55, 1.5), None, 100, 0.4)
         
         #Chests
-        matrix[1][1].contents = Chest([Potion("Health", 50)])
+        matrix[1][1].contents = Chest([Potion("Health", 100)])
         matrix[4][0].contents = Chest([Weapon("Long Sword", 10, 20, 0.45, 1.25)])
         matrix[4][1].contents = Chest([Potion("Health", 100)])
         matrix[0][3].contents = Chest([Potion("Strength", 7)])
@@ -530,94 +773,35 @@ class Game:
     def move(self):
         playerInput = input("")
         parser = self.inputParser(playerInput)
-        if self.find_part(parser["Action"]) == "movement":
-            if self.find_part(parser["Direct Object"]) == "direction":
-                for direction, synonyms in self.dictionary["directions"].items():
-                    if playerInput.split()[1] in synonyms:
-                        self.moving(direction)
-                        break
-            elif self.find_part(parser["Direct Object"]) == "next" and self.lastRoom is not None:
-                self.nextRoom()
-            elif parser["Indirect Object"] is not None:
-                if self.find_part(parser["Indirect Object"].split()[-1]) == "room":
-                    if self.find_part(parser["Indirect Object"].split()[0]) == "next":
+        if "movement" in self.dictionary.get(parser["Action"], [""]):
+            if parser["Direct Object"]:
+                if len(parser["Direct Object"].split()) == 1:
+                    if set(self.dictionary.get(parser["Direct Object"], [""])) & set(self.dictionary['direction']):
+                        self.moving(self.dictionary[parser["Direct Object"]][0])
+                    elif "next" in self.dictionary.get(parser["Direct Object"], [""]) and self.lastRoom is not None:
                         self.nextRoom()
-                    elif self.find_part(parser["Indirect Object"].split()[0]) == "direction":
-                       for direction, synonyms in self.dictionary["directions"].items():
-                           if parser["Indirect Object"].split()[0] in synonyms:
-                               self.moving(direction)
-                               break
-        elif self.find_part(parser["Action"]) == "look" and (self.find_part(parser["Direct Object"]) == "map" or self.find_part(parser["Indirect Object"]) == "map"):
+            elif parser["Indirect Object"]:
+                if any(word in self.dictionary.get(parser["Indirect Object"].split()[-1], [""]) for word in ("room", "door")):
+                    if set(self.dictionary.get(parser["Indirect Object"].split()[0], [""])) & set(self.dictionary['direction']):
+                        self.moving(self.dictionary[parser["Indirect Object"].split()[0]][0])
+                    elif "next" in self.dictionary.get(parser["Indirect Object"].split()[0], [""]) and self.lastRoom is not None:
+                        self.nextRoom()
+                elif set(self.dictionary.get(parser["Indirect Object"].split()[-1], [""])) & set(self.dictionary['direction']):
+                    self.moving(self.dictionary[parser["Indirect Object"].split()[-1]][0])
+                elif "next" in self.dictionary.get(parser["Indirect Object"].split()[-1], [""]) and self.lastRoom is not None:
+                    self.nextRoom()
+        elif "look" in self.dictionary.get(parser["Action"], [""]) and any("map" in self.dictionary.get(parser[obj], [""]) for obj in ["Direct Object", "Indirect Object"]):
             self.generate_map()
-        elif (self.find_part(parser["Action"]) == "look" or self.find_part(parser["Action"]) == "open") and (self.find_part(parser["Direct Object"]) == "chest" or self.find_part(parser["Indirect Object"]) == "chest"):
+        elif any(word in self.dictionary.get(parser["Action"], [""]) for word in ("look", "open")) and any("chest" in self.dictionary.get(parser[obj], [""]) for obj in ["Direct Object", "Indirect Object"]):
             x,y = self.currentRoom
             if isinstance(self.dungeon[x][y].contents, Chest):
                 print("chest to inspect")
                 self.state = "Inspect"
             else:
                 print("no chest")
-        elif self.find_part(parser["Action"]) == "use" or self.find_part(parser["Action"]) == "drink":
-            if self.find_part(parser["Direct Object"].split()[0]) == "health" and self.find_part(parser["Direct Object"].split()[-1]) == "potion":
-                print("Use health potion?")
-                health_potions = [item for item in self.player.inventory if isinstance(item, Potion) and item.type == "Health"]
-                if health_potions:
-                    print("Yes!")
-                    health_potions[0].use(self.player)
-                    self.player.inventory.remove(health_potions[0])
-                else:
-                    print("No")
-            elif self.find_part(parser["Direct Object"].split()[0]) == "strength" and self.find_part(parser["Direct Object"].split()[-1]) == "potion":
-                print("Use strength potion?")
-                strength_potions = [item for item in self.player.inventory if isinstance(item, Potion) and item.type == "Strength"]
-                if strength_potions:
-                    print("Yes!")
-                    strength_potions[0].use(self.player)
-                    self.player.inventory.remove(strength_potions[0])
-                else:
-                    print("No")
-        
-        
-    def fight(self, monster):
-        while 0 < self.player.health and 0 < monster.health:
-            print(self.player.health, monster.health)
-            playerInput = input("")
-            parser = self.inputParser(playerInput)
-            
-            if self.find_part(parser["Action"]) == "attack":
-                #Player move
-                playerDamage = random.randint(self.player.weapon.minDamage, self.player.weapon.maxDamage) + self.player.strength
-                if random.random() < self.player.weapon.criticalChance:
-                    print("Player Critcal!")
-                    playerDamage = int(playerDamage * self.player.weapon.critical)
-                    #crit_damage = int(base_damage * crit_multiplier)
-                print("Player Damage:",playerDamage)
-                monster.health -= playerDamage
-                
-                if monster.health <= 0:
-                    print("Enemy defeated!")
-                    x,y = self.currentRoom
-                    self.dungeon[x][y].contents = None
-                    self.state = "Move"
-                    break
-                
-                #Monster move
-                if random.random() <= self.player.dodge:
-                    print("Dodge. No damage taken")
-                else:
-                    enemyDamage = random.randint(monster.weapon.minDamage, monster.weapon.maxDamage)
-                    if random.random() < monster.weapon.criticalChance:
-                        print("Monster Critcal!")
-                        enemyDamage = int(enemyDamage * monster.weapon.critical)
-                    print("Enemy Damage:",enemyDamage)
-                    self.player.health -= enemyDamage
-                
-                if self.player.health <= 0:
-                    print("Game Over!")
-                    self.state = "Game Over"
-                    self.running = False
-                    break
-            elif self.find_part(parser["Action"]) == "use" or self.find_part(parser["Action"]) == "drink":
-                if self.find_part(parser["Direct Object"].split()[0]) == "health" and self.find_part(parser["Direct Object"].split()[-1]) == "potion":
+        elif any(word in self.dictionary.get(parser["Action"], [""]) for word in ("use", "drink")):
+            if len(parser["Direct Object"].split()) == 2 and "potion" in self.dictionary.get(parser["Direct Object"].split()[-1], [""]):
+                if "healing" in self.dictionary.get(parser["Direct Object"].split()[0], [""]):
                     print("Use health potion?")
                     health_potions = [item for item in self.player.inventory if isinstance(item, Potion) and item.type == "Health"]
                     if health_potions:
@@ -626,7 +810,7 @@ class Game:
                         self.player.inventory.remove(health_potions[0])
                     else:
                         print("No")
-                elif self.find_part(parser["Direct Object"].split()[0]) == "strength" and self.find_part(parser["Direct Object"].split()[-1]) == "potion":
+                elif "strength" in self.dictionary.get(parser["Direct Object"].split()[0], [""]):
                     print("Use strength potion?")
                     strength_potions = [item for item in self.player.inventory if isinstance(item, Potion) and item.type == "Strength"]
                     if strength_potions:
@@ -635,12 +819,93 @@ class Game:
                         self.player.inventory.remove(strength_potions[0])
                     else:
                         print("No")
-            elif self.find_part(parser["Action"]) == "run":
+        elif "show" in self.dictionary.get(parser["Action"], [""]):
+            if "health" in self.dictionary.get(parser["Direct Object"].split()[-1], [""]):
+                print("Health:", self.player.health)
+            elif "inventory" in self.dictionary.get(parser["Direct Object"].split()[-1], [""]):
+                if self.player.inventory:
+                    for item in self.player.inventory:
+                        print(item.type,"Potion")
+                else:
+                    print("No items")
+        
+        
+    def fight(self, monster):
+        while 0 < self.player.health and 0 < monster.health:
+            print(self.player.health, monster.health)
+            playerInput = input("")
+            parser = self.inputParser(playerInput)
+            
+            if "attack" in self.dictionary.get(parser["Action"], [""]):
+                if parser["Direct Object"] is None or any(word in self.dictionary.get(parser["Direct Object"], [""]) for word in ("monster", "enemy")):
+                    #Player move
+                    playerDamage = random.randint(self.player.weapon.minDamage, self.player.weapon.maxDamage) + self.player.strength
+                    if random.random() < self.player.weapon.criticalChance:
+                        print("Player Critcal!")
+                        playerDamage = int(playerDamage * self.player.weapon.critical)
+                        #crit_damage = int(base_damage * crit_multiplier)
+                    print("Player Damage:",playerDamage)
+                    monster.health -= playerDamage
+                    
+                    if monster.health <= 0:
+                        print("Enemy defeated!")
+                        x,y = self.currentRoom
+                        self.dungeon[x][y].contents = None
+                        self.state = "Move"
+                        break
+                    
+                    #Monster move
+                    if random.random() <= self.player.dodge:
+                        print("Dodge. No damage taken")
+                    else:
+                        enemyDamage = random.randint(monster.weapon.minDamage, monster.weapon.maxDamage)
+                        if random.random() < monster.weapon.criticalChance:
+                            print("Monster Critcal!")
+                            enemyDamage = int(enemyDamage * monster.weapon.critical)
+                        print("Enemy Damage:",enemyDamage)
+                        self.player.health -= enemyDamage
+                    
+                    if self.player.health <= 0:
+                        print("Game Over!")
+                        self.state = "Game Over"
+                        self.running = False
+                        break
+            
+            elif any(word in self.dictionary.get(parser["Action"], [""]) for word in ("use", "drink")):
+                if len(parser["Direct Object"].split()) == 2 and "potion" in self.dictionary.get(parser["Direct Object"].split()[-1], [""]):
+                    if "healing" in self.dictionary.get(parser["Direct Object"].split()[0], [""]):
+                        print("Use health potion?")
+                        health_potions = [item for item in self.player.inventory if isinstance(item, Potion) and item.type == "Health"]
+                        if health_potions:
+                            print("Yes!")
+                            health_potions[0].use(self.player)
+                            self.player.inventory.remove(health_potions[0])
+                        else:
+                            print("No")
+                    elif "strength" in self.dictionary.get(parser["Direct Object"].split()[0], [""]):
+                        print("Use strength potion?")
+                        strength_potions = [item for item in self.player.inventory if isinstance(item, Potion) and item.type == "Strength"]
+                        if strength_potions:
+                            print("Yes!")
+                            strength_potions[0].use(self.player)
+                            self.player.inventory.remove(strength_potions[0])
+                        else:
+                            print("No")
+            elif "run" in self.dictionary.get(parser["Action"], [""]):
                 oldRoom = self.currentRoom
                 self.currentRoom = self.lastRoom
                 self.lastRoom = oldRoom
                 self.state = "Move"
                 break
+            elif "show" in self.dictionary.get(parser["Action"], [""]):
+                if "health" in self.dictionary.get(parser["Direct Object"].split()[-1], [""]):
+                    print("Health:", self.player.health)
+                elif "inventory" in self.dictionary.get(parser["Direct Object"].split()[-1], [""]):
+                    if self.player.inventory:
+                        for item in self.player.inventory:
+                            print(item.type,"Potion")
+                    else:
+                        print("No items")
             
             
     def inspect(self, chest):
@@ -682,64 +947,76 @@ class Game:
             playerInput = input("")
             parser = self.inputParser(playerInput)
             
-            if self.find_part(parser["Action"]) == "attack":
-                #Player move
-                playerDamage = random.randint(self.player.weapon.minDamage, self.player.weapon.maxDamage) + self.player.strength
-                if random.random() < self.player.weapon.criticalChance:
-                    print("Player Critcal!")
-                    playerDamage = int(playerDamage * self.player.weapon.critical)
-                    #crit_damage = int(base_damage * crit_multiplier)
-                print("Player Damage:",playerDamage)
-                monster.health -= playerDamage
-                
-                if monster.health <= 0:
-                    print("Enemy defeated! You beat the game!")
-                    x,y = self.currentRoom
-                    self.dungeon[x][y].contents = None
-                    self.state = "Move"
-                    break
-                
-                #Monster move
-                if random.random() <= self.player.dodge:
-                    print("Dodge. No damage taken")
-                else:
-                    enemyDamage = random.randint(monster.weapon.minDamage, monster.weapon.maxDamage)
-                    if random.random() < monster.weapon.criticalChance:
-                        print("Monster Critcal!")
-                        enemyDamage = int(enemyDamage * monster.weapon.critical)
-                    print("Enemy Damage:",enemyDamage)
-                    self.player.health -= enemyDamage
-                
-                if self.player.health <= 0:
-                    print("Game Over!")
-                    self.state = "Game Over"
-                    self.running = False
-                    break
-            elif self.find_part(parser["Action"]) == "use" or self.find_part(parser["Action"]) == "drink":
-                if self.find_part(parser["Direct Object"].split()[0]) == "health" and self.find_part(parser["Direct Object"].split()[-1]) == "potion":
-                    print("Use health potion?")
-                    health_potions = [item for item in self.player.inventory if isinstance(item, Potion) and item.type == "Health"]
-                    if health_potions:
-                        print("Yes!")
-                        health_potions[0].use(self.player)
-                        self.player.inventory.remove(health_potions[0])
+            if "attack" in self.dictionary.get(parser["Action"], [""]):
+                if parser["Direct Object"] is None or any(word in self.dictionary.get(parser["Direct Object"], [""]) for word in ("monster", "enemy")):
+                    #Player move
+                    playerDamage = random.randint(self.player.weapon.minDamage, self.player.weapon.maxDamage) + self.player.strength
+                    if random.random() < self.player.weapon.criticalChance:
+                        print("Player Critcal!")
+                        playerDamage = int(playerDamage * self.player.weapon.critical)
+                        #crit_damage = int(base_damage * crit_multiplier)
+                    print("Player Damage:",playerDamage)
+                    monster.health -= playerDamage
+                    
+                    if monster.health <= 0:
+                        print("Enemy defeated! Game over")
+                        x,y = self.currentRoom
+                        self.dungeon[x][y].contents = None
+                        self.state = "Move"
+                        break
+                    
+                    #Monster move
+                    if random.random() <= self.player.dodge:
+                        print("Dodge. No damage taken")
                     else:
-                        print("No")
-                elif self.find_part(parser["Direct Object"].split()[0]) == "strength" and self.find_part(parser["Direct Object"].split()[-1]) == "potion":
-                    print("Use strength potion?")
-                    strength_potions = [item for item in self.player.inventory if isinstance(item, Potion) and item.type == "Strength"]
-                    if strength_potions:
-                        print("Yes!")
-                        strength_potions[0].use(self.player)
-                        self.player.inventory.remove(strength_potions[0])
-                    else:
-                        print("No")
-            elif self.find_part(parser["Action"]) == "run":
+                        enemyDamage = random.randint(monster.weapon.minDamage, monster.weapon.maxDamage)
+                        if random.random() < monster.weapon.criticalChance:
+                            print("Monster Critcal!")
+                            enemyDamage = int(enemyDamage * monster.weapon.critical)
+                        print("Enemy Damage:",enemyDamage)
+                        self.player.health -= enemyDamage
+                    
+                    if self.player.health <= 0:
+                        print("Game Over!")
+                        self.state = "Game Over"
+                        self.running = False
+                        break
+            
+            elif any(word in self.dictionary.get(parser["Action"], [""]) for word in ("use", "drink")):
+                if len(parser["Direct Object"].split()) == 2 and "potion" in self.dictionary.get(parser["Direct Object"].split()[-1], [""]):
+                    if "healing" in self.dictionary.get(parser["Direct Object"].split()[0], [""]):
+                        print("Use health potion?")
+                        health_potions = [item for item in self.player.inventory if isinstance(item, Potion) and item.type == "Health"]
+                        if health_potions:
+                            print("Yes!")
+                            health_potions[0].use(self.player)
+                            self.player.inventory.remove(health_potions[0])
+                        else:
+                            print("No")
+                    elif "strength" in self.dictionary.get(parser["Direct Object"].split()[0], [""]):
+                        print("Use strength potion?")
+                        strength_potions = [item for item in self.player.inventory if isinstance(item, Potion) and item.type == "Strength"]
+                        if strength_potions:
+                            print("Yes!")
+                            strength_potions[0].use(self.player)
+                            self.player.inventory.remove(strength_potions[0])
+                        else:
+                            print("No")
+            elif "run" in self.dictionary.get(parser["Action"], [""]):
                 oldRoom = self.currentRoom
                 self.currentRoom = self.lastRoom
                 self.lastRoom = oldRoom
                 self.state = "Move"
                 break
+            elif "show" in self.dictionary.get(parser["Action"], [""]):
+                if "health" in self.dictionary.get(parser["Direct Object"].split()[-1], [""]):
+                    print("Health:", self.player.health)
+                elif "inventory" in self.dictionary.get(parser["Direct Object"].split()[-1], [""]):
+                    if self.player.inventory:
+                        for item in self.player.inventory:
+                            print(item.type,"Potion")
+                    else:
+                        print("No items")
         
     def inputParser(self, userInput):
         userInput = userInput.lower()
@@ -818,40 +1095,14 @@ class Game:
             "Indirect Object": prsi
         }
     
-    def find_part(self, word):
-        for key, value in self.dictionary.items():
-            if isinstance(value, dict) and key == "directions":  # Handle nested direction subcategories
-                for sublist in value.values():
-                    if word in sublist:
-                        return "direction"
-            elif isinstance(value, dict) and key == "weapon":  # Handle nested direction subcategories
-                for sublist in value.values():
-                    if word in sublist:
-                        print("weapon")
-                        return "weapon"
-            elif word in value:
-                return key
-        return "Not found"
             
     
     def play(self):
-        #print("Playing game")
-        #directions = ["up", "down", "right", "left"]
-        
         print("Welcome to the game. You're goal is to escape the dungeon.")
         self.state = "Move"
         
         while self.running:
             print(self.state)
-            #print(self.lastRoom, self.currentRoom)
-            
-            #print(f"Hello, {response}!")
-            
-            """
-            if playerInput == "end":
-                print("\nGoodbye")
-                break;
-            """
             
             if self.state == "Move":
                 self.move()
@@ -871,9 +1122,7 @@ class Game:
 
 if __name__ == "__main__":
     game = Game()
-    #game.generate_full_map()
-    #game.generate_map()
-    game.play();
+    game.play()
     
     
     
