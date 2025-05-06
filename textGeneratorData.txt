@@ -310,6 +310,7 @@ NO You choose not to take it. Do you leave the chest?
 NO You decide you don't want the chest_item___. Do you leave the chest?
 NO You decide against taking the chest's contents. Do you leave the chest?
 NO You are deciding not to take the chest_item___. Are you sure about this?
+NO You decide against taking this chest's contents. Are you sure about this?
 
 YES_LEAVE_CHEST Ok, you leave the chest alone. What do you do now?
 YES_LEAVE_CHEST So you firmly decide to not take the chest's contents. What do you do now?
@@ -321,6 +322,7 @@ YES_TAKE_WEAPON You drop your current weapon, the player_weapon___, and grab the
 YES_TAKE_WEAPON You take the chest_weapon___ and leave your current weapon, the player_weapon___, behind. 
 YES_TAKE_WEAPON You leave your player_weapon___ behind and grab the chest_weapon___ as a replacement weapon.
 YES_TAKE_WEAPON You let go of your player_weapon___ and grab the chest_weapon___ to replace it. 
+YES_TAKE_WEAPON You drop your player_weapon___ and grab the chest_weapon___ as a replacement weapon.
 
 TAKE_LONG_SWORD You can already tell that it is a more well-made weapon than a regular sword simply from looking and touching it.
 TAKE_LONG_SWORD You have not had it for much time, but it seems to be made of higher quality material than a regular sword.
@@ -363,6 +365,8 @@ HEALTHPOTION_MAXHEALTH After taking that health potion, you are back to full hea
 HEALTHPOTION_MAXHEALTH Drinking the health potion has brought you to full health. What do you do now?
 HEALTHPOTION_MAXHEALTH That health potion has allowed you to be at full health again. What do you do now?
 HEALTHPOTION_MAXHEALTH You are now at full health because of that health potion. What do you do now?
+HEALTHPOTION_MAXHEALTH Because of that health potion, you are brought to full health. What do you do now?
+HEALTHPOTION_MAXHEALTH Taking the health potion brings you back to full health. What do you do now?
 
 POTION_FAIL You attempt to take a type___ potion, but you quickly realize you don't have one. Pick another option.
 POTION_FAIL You try to drink a type___ potion, but it turns out you don't have a type___ potion. Pick another option.
@@ -440,11 +444,13 @@ DEFEATED_MONSTER_ROOM You enter the room and see the body of a monster_type___ y
 DEFEATED_MONSTER_ROOM You enter, see the remains of a monster_type___, and are reminded of bad memories of your fight with that monster.
 DEFEATED_MONSTER_ROOM You've been in this room before; it has the corpse of a monster_type___ you fought earlier.
 DEFEATED_MONSTER_ROOM You revisit a room with a monster_type___ you've already defeated.
+DEFEATED_MONSTER_ROOM You enter the room and see the corpse of a monster_type___ you previously fought.
 
 EMPTY_CHEST_ROOM You enter the room to find a chest but are reminded that you were here before and it is empty.
 EMPTY_CHEST_ROOM You enter to see the chest that you emptied long ago.
 EMPTY_CHEST_ROOM A chest that you emptied previously is in this room.
 EMPTY_CHEST_ROOM Nothing here other than a chest you already emptied.
+EMPTY_CHEST_ROOM You find, in this room, a chest you already emptied long ago.
 
 ROOM_MOVE1 From here, you can only go direction___.
 ROOM_MOVE1 You can only move direction___ from this room.
@@ -465,6 +471,7 @@ GENERIC_POTION_DESCRIPTION The item is a vial of color___ liquid with a potion_t
 GENERIC_POTION_DESCRIPTION This item is a vial of color___ liquid sporting a label identifying it as a potion_type___ Potion.
 GENERIC_POTION_DESCRIPTION The item is a vial of some color___ liquid, and you look at the label and learn that it's a potion_type___ Potion.
 GENERIC_POTION_DESCRIPTION This item is a vial of some color___ fluid that bears a potion_type___ Potion label.
+GENERIC_POTION_DESCRIPTION The item is a vial of color___ fluid with a potion_type___ Potion label.
 
 ENCOUNTERED_POTION There's a potion_type___ Potion there.
 ENCOUNTERED_POTION The chest contains a potion_type___ Potion.
@@ -486,17 +493,20 @@ LONG_SWORD_DESCRIPTION There's a long sword inside. This long sword is longer th
 LONG_SWORD_DESCRIPTION This chest contains a long sword. It is longer and more powerful than a regular sword, but you can only carry one weapon so if you take it, you must drop your current weapon. Do you take it?
 LONG_SWORD_DESCRIPTION The chest has a long sword. Longer than a regular sword, it is also more powerful, but in order to take it, you need to drop your current weapon because you are only able to carry one weapon. Do you take it?
 LONG_SWORD_DESCRIPTION You find a long sword inside. It deals superior damage to enemies compared to a regular sword; however, taking it requires you to drop your current weapon. Do you take it?
+LONG_SWORD_DESCRIPTION There's a long sword inside. It deals superior damage to enemies compared to a regular sword, but you can only carry one weapon so if you want it, you have to drop your current weapon. Do you take it?
 
 STEEL_SWORD_DESCRIPTION There's a steel sword inside. This steel sword is stronger than a regular sword, and even stronger than a long sword, however, you can only carry one weapon so if you take it, you have to drop your current weapon. Do you take it?
 STEEL_SWORD_DESCRIPTION This chest contains a steel sword. It is more powerful than both a regular sword and a long sword, but you only have room for a single weapon so if you take it, you must drop your current weapon. Do you take it?
 STEEL_SWORD_DESCRIPTION The chest has a steel sword. It is much stronger than a regular sword and moderately stronger than a long sword, but in order to take it, you need to drop your current weapon because you are only able to carry one weapon. Do you take it?
 STEEL_SWORD_DESCRIPTION You find a steel sword inside. This is an exceptionally strong and rare sword that is superior to both regular swords and long swords, but if you take it, you must drop your current weapon. Do you take it?
+STEEL_SWORD_DESCRIPTION There's a steel sword inside. It is stronger than a regular sword, and also stronger than a long sword, but if you take it, you must drop your current weapon. Do you take it?
 
 SHOW_HEALTH This is the current amount of health you have: health___.
 SHOW_HEALTH Here is how much health you have remaining: health___.
 SHOW_HEALTH Here is your current amount of health: health___.
 SHOW_HEALTH This is your current amount of health: health___.
 SHOW_HEALTH This is how much health you have remaining: health___.
+SHOW_HEALTH Here's how much health you have left: health___.
 
 SHOW_INVENTORY These are the items in your inventory.
 SHOW_INVENTORY You have the following items in your bag.
