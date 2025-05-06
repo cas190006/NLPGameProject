@@ -7,3 +7,5 @@ The NLP concepts used are a player input parser and text message generator. When
 The text generator is a simple language model using the concept of ngrams. The n value for these ngrams varies between 3 and 6 depending on the purpose of the text generated. The data that the text generator uses is located in the textGeneratorData.txt file. 
 
 When you run the game, make sure that the textGeneratorData.txt file is in the same directory as the game file.
+
+YouTube Game Demo Video: https://youtu.be/NuvYWFKxEZ0
