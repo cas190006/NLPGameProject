@@ -94,12 +94,26 @@ STUN_ATTEMPT_FAIL He successfully resists getting stunned.
 STUN_ATTEMPT_FAIL Unfortunately, you don't stun him.
 STUN_ATTEMPT_FAIL Your attempt to stun him fails.
 STUN_ATTEMPT_FAIL The monster resists getting stunned.
+STUN_ATTEMPT_FAIL You didn't manage to stun the enemy.
 
 STUN_ATTEMPT_BOSS It appears as though this monster is immune to getting stunned.
 STUN_ATTEMPT_BOSS Unfortunately, this monster cannot ever be stunned.
-STUN_ATTEMPT_BOSS Your stun skill won't have an effect on this monster.
-STUN_ATTEMPT_BOSS This monster has immunity to your stun skill.
+STUN_ATTEMPT_BOSS Your stun skill won't ever successfully stun this monster.
+STUN_ATTEMPT_BOSS This monster has immunity to being stunned by your stun skill.
 STUN_ATTEMPT_BOSS It is impossible to stun this monster.
+STUN_ATTEMPT_BOSS Stun attacks don't ever stun this monster.
+
+STUN_DAMAGE Additionally, your stun attack does a small amount of damage.
+STUN_DAMAGE On top of being stunned, the monster suffers a bit of damage.
+STUN_DAMAGE While stunning him, you manage to deal a little damage.
+STUN_DAMAGE As a bonus, you slightly damage the monster.
+STUN_DAMAGE You even manage to slightly damage the monster in the process.
+
+STUN_DAMAGE_BOSS Despite your stun failing, you do some damage.
+STUN_DAMAGE_BOSS However, even though he's immune to stuns, your attack does a low amount of damage to him.
+STUN_DAMAGE_BOSS You do manage to inflict a little damage, though.
+STUN_DAMAGE_BOSS He may not be stunned, but he does take a bit of damage.
+STUN_DAMAGE_BOSS However, your attack wasn't completely useless; the monster takes slight damage from it. 
 
 STUN_WEAR_OFF The monster is no longer stunned.
 STUN_WEAR_OFF Your stun attack's effect wears off and the monster can act again.
@@ -128,6 +142,7 @@ FIREBALL_ATTEMPT_FAIL The monster isn't in the direct path of your fireball and 
 FIREBALL_ATTEMPT_FAIL The fireball misses the monster, who is completely unaffected by it.
 FIREBALL_ATTEMPT_FAIL The fireball completely misses and the monster is unscathed.
 FIREBALL_ATTEMPT_FAIL Your fireball fails to hit the monster.
+FIREBALL_ATTEMPT_FAIL Your fireball doesn't hit the enemy.
 
 FROSTBITE_CURE Using fireball removed inflicted frostbite.
 FROSTBITE_CURE Your use of the fireball skill has cured you of frostbite.
@@ -139,7 +154,7 @@ SKILL_FAIL You can't skill___ now.
 SKILL_FAIL You aren't able to use your skill___ skill now.
 SKILL_FAIL Your skill___ skill won't work at the moment.
 SKILL_FAIL You used your skill___ skill too recently to use it again.
-SKILL_FAIL You can't use your skill___ skill now; it is on cooldown.
+SKILL_FAIL You can't use your skill___ skill; it is on cooldown.
 
 SKILL_USABLE You can now skill___.
 SKILL_USABLE You're able to use your skill___ skill again.
@@ -260,10 +275,10 @@ MONSTER_DEFEATED You are able to kill the monster. He falls, letting you pass. Y
 MONSTER_DEFEATED The monster is killed. You can now pass. You take a breather after your battle.
 MONSTER_DEFEATED You finally kill the monster. You can now pass through the room he was in. You take a breather after this battle.
 MONSTER_DEFEATED The monster is slain. There is nothing remaining in the room he was guarding other than his corpse, so you can just pass through. You take a breather after your battle.
-MONSTER_DEFEATED You finally slay the monster. With him out of the way, you can pass. You take a breather after your brawl.
+MONSTER_DEFEATED You finally slay the monster. With him out of your way, you can pass. You take a breather after your brawl.
 MONSTER_DEFEATED The monster is now dead. Since he is no longer a threat, you can pass through the room he previously inhabited. You take a breather after your brawl.
 MONSTER_DEFEATED The monster is defeated. With this victory, you can pass through the chamber he was in. You take a breather after your duel.
-MONSTER_DEFEATED At last, you kill the monster. With this threat out of the way, the chamber is safe to pass through. You take a breather after your duel.
+MONSTER_DEFEATED At last, you kill the monster. With this threat out of your way, the chamber is safe to pass through. You take a breather after your duel.
 MONSTER_DEFEATED The monster has been vanquished. He falls, letting you pass through the room he was in. You take a breather after your brawl.
 MONSTER_DEFEATED You finally dispatch the monster. You can now pass. You take a breather after your duel.
 MONSTER_DEFEATED You finish off the monster. You won't need to worry about him anymore. You feel relieved that the battle is over.
@@ -484,3 +499,9 @@ SHOW_INVENTORY You have the following items in your bag.
 SHOW_INVENTORY You are carrying the following items.
 SHOW_INVENTORY These are the items in your bag.
 SHOW_INVENTORY These are the items you are carrying.
+
+GENERAL_QUESTION What will you do now?
+GENERAL_QUESTION What do you do next?
+GENERAL_QUESTION What is your next move?
+GENERAL_QUESTION What action do you take next?
+GENERAL_QUESTION What will you do next?
