@@ -927,8 +927,8 @@ class Game:
         matrix[1][0].contents = Monster("Penguin Zombie", Weapon("Claws", 9, 13, 0.3, 1.15), None, 70, 0.25)
         matrix[3][2].contents = Monster("Fiend of Insatiable Greed", Weapon("Sword", 10, 15, 0.4, 1.25), None, 80, 0.25)
         matrix[0][2].contents = Monster("Troll", Weapon("Axe", 7, 18, 0.4, 1.5), None, 85, 0.25)
-        matrix[3][3].contents = Monster("Demon", Weapon("Long Sword", 13, 20, 0.45, 1.4), None, 90, 0.35)
-        matrix[1][4].contents = Monster("Shadow Ghoul", Weapon("Long Sword", 15, 20, 0.45, 1.45), None, 100, 0.4)
+        matrix[3][3].contents = Monster("Demon", Weapon("Spear", 13, 20, 0.45, 1.4), None, 90, 0.35)
+        matrix[1][4].contents = Monster("Martenoid Guard", Weapon("Long Sword", 15, 20, 0.45, 1.45), None, 100, 0.4)
         matrix[4][2].contents = Monster("Skeletal Giant", Weapon("Mace", 11, 14, 0.5, 1.2), None, 70, 0.5)
         matrix[4][4].contents = Monster("Boss Warbeast", Weapon("Steel Sword", 20, 30, 0.55, 1.5), None, 170, 0.4)
             
