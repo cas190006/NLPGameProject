@@ -446,7 +446,7 @@ DEFEATED_MONSTER_ROOM You've been in this room before; it has the corpse of a mo
 DEFEATED_MONSTER_ROOM You revisit a room with a monster_type___ you've already defeated.
 DEFEATED_MONSTER_ROOM You enter the room and see the corpse of a monster_type___ you previously fought.
 
-EMPTY_CHEST_ROOM You enter the room to find a chest but are reminded that you were here before and it is empty.
+EMPTY_CHEST_ROOM You enter the room to find a chest but are reminded that you were in here before and it is empty.
 EMPTY_CHEST_ROOM You enter to see the chest that you emptied long ago.
 EMPTY_CHEST_ROOM A chest that you emptied previously is in this room.
 EMPTY_CHEST_ROOM Nothing here other than a chest you already emptied.
@@ -473,11 +473,15 @@ GENERIC_POTION_DESCRIPTION The item is a vial of some color___ liquid, and you l
 GENERIC_POTION_DESCRIPTION This item is a vial of some color___ fluid that bears a potion_type___ Potion label.
 GENERIC_POTION_DESCRIPTION The item is a vial of color___ fluid with a potion_type___ Potion label.
 
-ENCOUNTERED_POTION There's a potion_type___ Potion there.
-ENCOUNTERED_POTION The chest contains a potion_type___ Potion.
-ENCOUNTERED_POTION You find inside a potion_type___ Potion.
-ENCOUNTERED_POTION You see a potion_type___ Potion inside.
-ENCOUNTERED_POTION This chest has a potion_type___ Potion.
+ENCOUNTERED_POTION There's a potion_type___ Potion there. Do you take it?
+ENCOUNTERED_POTION The chest contains a potion_type___ Potion. Do you take it?
+ENCOUNTERED_POTION You find inside a potion_type___ Potion. Do you take it?
+ENCOUNTERED_POTION You see a potion_type___ Potion inside. Do you take it?
+ENCOUNTERED_POTION This chest has a potion_type___ Potion. Do you take it?
+
+POTION_QUESTION Do you take it?
+POTION_QUESTION Do you take the potion?
+POTION_QUESTION Will you take the potion?
 
 STRENGTH_POTION_DESCRIPTION This potion would make you permanently stronger. Do you take it?
 STRENGTH_POTION_DESCRIPTION If you consume this potion, your strength level will be permanently higher. Do you take it?
