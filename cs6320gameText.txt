@@ -1,0 +1,486 @@
+INAPPROPRIATE That doesn't seem like an appropriate action to take at the moment. Please try again with a different input.
+INAPPROPRIATE That is not a valid action for this situation. Please try again with another input.
+INAPPROPRIATE That action is irrelevant to the current scenario. Please try again using a different input.
+INAPPROPRIATE This action is inappropriate for this situation. Please try again using another input.
+
+GAME_START You've woken up in an empty room with only your sword, a map, an empty bag, and clothing that does not offer any extra protection from attacks. Where do you go? What do you do?
+GAME_START You wake up in an empty room, and you only have your sword, a map, an empty bag, and clothing that doesn't confer any defensive advantages. Where do you go? What do you do?
+GAME_START You awaken in an empty chamber and the only things you have are your sword, a map, an empty bag, and clothing that won't give you extra protection from attacks. Where do you go? What do you do?
+GAME_START You wake up and see you're in an empty room; you only have your sword, a map, an empty bag, and clothing that doesn't offer you any defensive advantages. Where do you go? What do you do?
+
+MAP You check your map.
+MAP You examine your map.
+MAP You view your map.
+MAP You peek at your map.
+MAP You consult your map.
+MAP You inspect your map.
+MAP You study your map.
+MAP You survey your map.
+MAP You gaze at your map.
+
+MAP2 Looking at this map, which way do you go? What do you do?
+MAP2 Looking at this map, decide the next direction to go. What do you do?
+MAP2 Looking at this map, you must decide which direction to go next. What do you do?
+MAP2 Looking at the map, decide your next direction. What do you do?
+MAP2 Looking at the map, determine your next move. What do you do?
+MAP2 Looking at the map, decide which direction to travel next. What do you do?
+MAP2 Looking at this map, determine the next direction to move. What do you do?
+MAP2 Looking at the map, decide the next direction to go. What do you do?
+MAP2 Looking at the map, which way do you go? What do you do?
+MAP2 Now that you have this information, you must decide which direction to go next. What do you do?
+MAP2 Now that you have this information, decide your subsequent move. What do you do?
+MAP2 Looking at this map, which way do you move? What do you do?
+MAP2 Looking at this map, determine your next move. What do you do?
+MAP2 Looking at this map, decide your next direction. What do you do?
+MAP2 Looking at this map, decide which direction to travel next. What do you do?
+MAP2 Looking at the map, which way do you move? What do you do?
+MAP2 Looking at this map, you must determine which direction to go next. What do you do?
+
+MOVE You go direction___.
+MOVE You head direction___.
+MOVE You move direction___.
+MOVE You travel direction___.
+
+MOVE_WORD You word___ direction___.
+
+MOVE_FAIL You can't go direction___. There is a wall in the way, and you can't get past it.
+MOVE_FAIL You can't head direction___. A wall prevents you from moving direction___.
+MOVE_FAIL You can't move direction___. There is a wall there, and you can't get by it or break it down.
+MOVE_FAIL You can't travel direction___. There is a wall in the way, and nothing you do can get you past it.
+
+MOVE_FAIL2 You can't word___ direction___. There is a wall in the way, and you can't get past it.
+MOVE_FAIL2 You can't word___ direction___. A wall prevents you from moving direction___.
+MOVE_FAIL2 You can't word___ direction___. There is a wall there, and you can't get by it or break it down.
+MOVE_FAIL2 You can't word___ direction___. There is a wall in the way, and nothing you do can get you past it.
+MOVE_FAIL2 You can't word___ direction___. An impenetrable wall blocks your path.
+
+NEXT_ROOM You go forth to the next room.
+NEXT_ROOM You go onward to the next room.
+NEXT_ROOM You advance to the next room.
+NEXT_ROOM You progress on to the next room.
+NEXT_ROOM You venture to the next room.
+
+ATTACK You use your weapon_name___ and deal some damage_type___ to that monster.
+ATTACK You attack and deal damage_type___ this time, greatly hurting the monster.
+ATTACK You attack and deal damage_type___, hurting the monster.
+ATTACK You attack and deal some damage_type___ towards the monster.
+ATTACK You attack, this time dealing damage_type___.
+ATTACK You attack the monster and do damage_type___.
+ATTACK You use your weapon_name___ to strike the monster, dealing damage_type___ to him.
+ATTACK You swing your weapon_name___ at the monster, dealing damage_type___ towards him.
+ATTACK You hit the monster with your weapon_name___ and this hit does damage_type___.
+ATTACK You assail the monster with your weapon_name___ and do damage_type___ to him.
+ATTACK You strike the monster and do damage_type___.
+ATTACK You strike the monster with your weapon_name___ and do damage_type___.
+ATTACK You beat up on the monster, dealing damage_type___.
+ATTACK You batter the monster with your weapon_name___ and deal damage_type___ to that monster.
+ATTACK You buffet the monster with your weapon_name___ and do damage_type___ to him.
+ATTACK You tear into the monster with your weapon_name___, causing him to take damage_type___.
+
+STUN_ATTEMPT You attempt to stun the monster.
+STUN_ATTEMPT You try to hinder the monster.
+STUN_ATTEMPT You attempt to make the monster stagger.
+STUN_ATTEMPT You use your stun skill to try to stun the monster.
+STUN_ATTEMPT You try to stun the monster.
+
+STUN_ATTEMPT_SUCCESS You succeed in stunning him, and he won't be able to attack you next turn.
+STUN_ATTEMPT_SUCCESS You successfully stun him so he won't do anything for the following turn.
+STUN_ATTEMPT_SUCCESS He ends up getting stunned, losing his following turn.
+STUN_ATTEMPT_SUCCESS You temporarily paralyze the monster; therefore, he won't do anything during the next turn.
+STUN_ATTEMPT_SUCCESS The monster gets stunned and loses his following turn.
+
+STUN_ATTEMPT_FAIL You are not able to stun him.
+STUN_ATTEMPT_FAIL He successfully resists getting stunned.
+STUN_ATTEMPT_FAIL Unfortunately, you don't stun him.
+STUN_ATTEMPT_FAIL Your attempt to stun him fails.
+STUN_ATTEMPT_FAIL The monster resists getting stunned.
+
+STUN_ATTEMPT_BOSS It appears as though this monster is immune to getting stunned.
+STUN_ATTEMPT_BOSS Unfortunately, this monster cannot ever be stunned.
+STUN_ATTEMPT_BOSS Your stun skill won't have an effect on this monster.
+STUN_ATTEMPT_BOSS This monster has immunity to your stun skill.
+STUN_ATTEMPT_BOSS It is impossible to stun this monster.
+
+STUN_WEAR_OFF The monster is no longer stunned.
+STUN_WEAR_OFF Your stun attack's effect wears off and the monster can act again.
+STUN_WEAR_OFF The monster breaks out of his stunned state.
+STUN_WEAR_OFF The monster is freed from being stunned.
+STUN_WEAR_OFF The monster isn't stunned anymore and can move again.
+
+FIREBALL_ATTEMPT You throw a fireball at the monster.
+FIREBALL_ATTEMPT You make a fireball and shoot it at the monster.
+FIREBALL_ATTEMPT You create a fireball, aim at the monster, and then release the fireball.
+FIREBALL_ATTEMPT You create a fireball and throw it at the monster.
+FIREBALL_ATTEMPT You make a fireball and blast the monster with it.
+FIREBALL_ATTEMPT You throw a red-hot ball of fire at the monster.
+
+FIREBALL_ATTEMPT_SUCCESS Your fireball hits the monster, which greatly injures him.
+FIREBALL_ATTEMPT_SUCCESS The fireball connects with the monster and he suffers a lot of damage.
+FIREBALL_ATTEMPT_SUCCESS Your aim was perfect and the monster gets hit, causing considerable damage to him.
+FIREBALL_ATTEMPT_SUCCESS The fireball slams into the monster, burning him and greatly hurting him.
+FIREBALL_ATTEMPT_SUCCESS The fireball strikes the monster; he is charred and badly hurt.
+FIREBALL_ATTEMPT_SUCCESS The monster gets incinerated by the fireball and takes great damage.
+FIREBALL_ATTEMPT_SUCCESS The fireball scorches the monster, greatly injuring him.
+FIREBALL_ATTEMPT_SUCCESS The monster is seared by the fireball and takes considerable damage.
+
+FIREBALL_ATTEMPT_FAIL Unfortunately, your aim is off and you miss the monster.
+FIREBALL_ATTEMPT_FAIL The monster isn't in the direct path of your fireball and doesn't take damage.
+FIREBALL_ATTEMPT_FAIL The fireball misses the monster, who is completely unaffected by it.
+FIREBALL_ATTEMPT_FAIL The fireball completely misses and the monster is unscathed.
+FIREBALL_ATTEMPT_FAIL Your fireball fails to hit the monster.
+
+FROSTBITE_CURE Using fireball removed inflicted frostbite.
+FROSTBITE_CURE Your use of the fireball skill has cured you of frostbite.
+FROSTBITE_CURE Because you used fireball, you no longer have frostbite.
+FROSTBITE_CURE The warmth from the fireball has removed your frostbite ailment.
+FROSTBITE_CURE The heat from that fireball takes away your frostbite.
+
+SKILL_FAIL You can't skill___ now.
+SKILL_FAIL You aren't able to use your skill___ skill now.
+SKILL_FAIL Your skill___ skill won't work at the moment.
+SKILL_FAIL You used your skill___ skill too recently to use it again.
+SKILL_FAIL You can't use your skill___ skill now; it is on cooldown.
+
+SKILL_USABLE You can now skill___.
+SKILL_USABLE You're able to use your skill___ skill again.
+SKILL_USABLE Enough time has passed since you last used the skill___ skill that you can use it again.
+SKILL_USABLE You're now able to skill___ again.
+SKILL_USABLE Your skill___ skill is usable once more.
+
+MONSTER_ATTACK_PART1 He doesn't like that and he fights back @@
+MONSTER_ATTACK_PART1 He tries to use his monster_weapon___ @@
+MONSTER_ATTACK_PART1 He instantly swings his monster_weapon___, @@
+MONSTER_ATTACK_PART1 He attacks you with his monster_weapon___, @@
+MONSTER_ATTACK_PART1 He is enraged by your attack and responds with an attack of his own, @@
+MONSTER_ATTACK_PART1 He retaliates with his monster_weapon___, @@
+MONSTER_ATTACK_PART1 He furiously attacks back with his monster_weapon___ @@
+MONSTER_ATTACK_PART1 He won't tolerate that and he strikes back, @@
+MONSTER_ATTACK_PART1 He aggressively lunges to attempt to strike you with his monster_weapon___, @@
+MONSTER_ATTACK_PART1 He tries to beat up on you with his monster_weapon___, @@
+MONSTER_ATTACK_PART1 He is feeling vexed and lunges at you with his monster_weapon___ @@
+MONSTER_ATTACK_PART1 The monster is aggravated by your attack and he swings his monster_weapon___, @@
+MONSTER_ATTACK_PART1 He instantly attacks you back @@
+MONSTER_ATTACK_PART1 Feeling exasperated, the monster retaliates with an attack of his own, @@
+
+MONSTER_ATTACK_DODGE but you instinctively dodge so you don't take any damage.
+MONSTER_ATTACK_DODGE but you dodge out of the way, avoiding damage.
+MONSTER_ATTACK_DODGE but you successfully avoid the attack and don't take damage.
+MONSTER_ATTACK_DODGE but fortunately you are able to avoid getting hit and taking damage.
+MONSTER_ATTACK_DODGE but you luckily dodge his attack and suffer no damage.
+MONSTER_ATTACK_DODGE but you manage to dodge this attack and avoid getting hurt.
+MONSTER_ATTACK_DODGE but you evade his attack and receive no damage.
+MONSTER_ATTACK_DODGE but you manage to evade this attack and don't take any damage.
+MONSTER_ATTACK_DODGE but you move out of the way and don't take damage.
+MONSTER_ATTACK_DODGE but you skillfully evade his attack and avoid getting hurt.
+MONSTER_ATTACK_DODGE but you luckily dodge this attack and suffer no damage.
+MONSTER_ATTACK_DODGE but you avoid this and don't take any damage.
+
+PLAYER_NOT_HIT He's still standing so what do you do?
+PLAYER_NOT_HIT He is still alive so what do you do?
+PLAYER_NOT_HIT You cannot celebrate too much, because the monster_type___ is still alive. What do you do?
+PLAYER_NOT_HIT However, you have not won the battle yet. What do you do?
+PLAYER_NOT_HIT However, the monster_type___ is still alive so what do you do?
+PLAYER_NOT_HIT You didn't get hit that time, but the monster's not finished fighting yet. What will you do?
+
+MONSTER_ATTACK_P1 He instantly hits you back, @@
+MONSTER_ATTACK_P1 He instantly swings his monster_weapon___, @@
+MONSTER_ATTACK_P1 He doesn't like that and he fights back, @@
+MONSTER_ATTACK_P1 He attacks you with his monster_weapon___ @@
+MONSTER_ATTACK_P1 He is enraged by your attack and responds with an attack of his own, @@
+MONSTER_ATTACK_P1 He retaliates with his monster_weapon___, @@
+MONSTER_ATTACK_P1 He furiously attacks back with his monster_weapon___ @@
+MONSTER_ATTACK_P1 He won't tolerate that and he strikes back, @@
+MONSTER_ATTACK_P1 He aggressively lunges forward and strikes you with his monster_weapon___, @@
+MONSTER_ATTACK_P1 He beats up on you with his monster_weapon___, @@
+MONSTER_ATTACK_P1 He is feeling vexed and lunges at you with his monster_weapon___, @@
+MONSTER_ATTACK_P1 The monster is aggravated by your attack and he swings his monster_weapon___, @@
+MONSTER_ATTACK_P1 He uses his monster_weapon___ to hit you, @@
+MONSTER_ATTACK_P1 Feeling exasperated, the monster retaliates with an attack of his own, @@
+
+MONSTER_ATTACK_HIT dealing monster_damage_type___ to you.
+MONSTER_ATTACK_HIT which does monster_damage_type___ to you.
+MONSTER_ATTACK_HIT and this does monster_damage_type___ to you.
+MONSTER_ATTACK_HIT resulting in you taking monster_damage_type___.
+MONSTER_ATTACK_HIT inflicting monster_damage_type___ on you.
+MONSTER_ATTACK_HIT hitting you for monster_damage_type___.
+MONSTER_ATTACK_HIT causing you to take monster_damage_type___.
+MONSTER_ATTACK_HIT successfully hitting you for monster_damage_type___.
+MONSTER_ATTACK_HIT which results in you taking monster_damage_type___.
+MONSTER_ATTACK_HIT making you take monster_damage_type___.
+MONSTER_ATTACK_HIT and you take monster_damage_type___.
+MONSTER_ATTACK_HIT striking you for monster_damage_type___.
+
+PLAYER_HIT It hurts but you don't back down, or do you?
+PLAYER_HIT You're in pain but you don't back down, or do you?
+PLAYER_HIT You feel the aftermath of his strike but you don't back down, or do you?
+PLAYER_HIT You grimace from the pain but you don't back down, or do you?
+PLAYER_HIT It hurts but you are going to keep fighting, aren't you?
+PLAYER_HIT You're in pain but you are going to keep fighting, aren't you?
+PLAYER_HIT You feel the aftermath of his strike but are going to keep fighting, aren't you?
+PLAYER_HIT You grimace from the pain but you are going to keep fighting, aren't you?
+PLAYER_HIT It hurts but that won't deter you, will it?
+PLAYER_HIT You're in pain but that won't deter you, will it?
+PLAYER_HIT You feel the aftermath of his strike but that won't deter you, will it?
+PLAYER_HIT You grimace from the pain but that won't deter you, will it?
+
+PLAYER_DEFEATED This is enough to defeat you.
+PLAYER_DEFEATED This attack defeats you.
+PLAYER_DEFEATED With that successful attack, he defeats you.
+PLAYER_DEFEATED This strike is enough to make you fall defeated to the ground.
+PLAYER_DEFEATED This strike is enough to defeat you.
+PLAYER_DEFEATED With this attack, the monster is victorious.
+PLAYER_DEFEATED With that attack, the monster is victorious.
+PLAYER_DEFEATED With this attack, your life has ended.
+PLAYER_DEFEATED The monster has killed you.
+
+MONSTER_ICESHARDS He shoots some gigantic shards of ice at you.
+MONSTER_ICESHARDS He conjures a few large ice chunks and hurls them toward you.
+MONSTER_ICESHARDS He materializes several huge ice chunks and proceeds to throw them in your direction.
+MONSTER_ICESHARDS He creates some sharp pieces of ice and launches them at you.
+MONSTER_ICESHARDS The monster uses ice magic to conjure several giant ice shards, and then throws these shards at you.
+
+MONSTER_FROSTBITE He tries to give you frostbite with his next attack.
+MONSTER_FROSTBITE He is so angry at you that he intends to give you frostbite.
+MONSTER_FROSTBITE He hates you so much that he thinks you deserve to have frostbite.
+MONSTER_FROSTBITE He is furious and gets the idea to afflict you with frostbite.
+MONSTER_FROSTBITE He uses an ice attack on you in order to give you frostbite.
+
+MONSTER_LIFESTEAL For his next attack, he uses dark magic to steal health from you.
+MONSTER_LIFESTEAL He really hates you for that, and is even willing to use forbidden lifesteal magic on you.
+MONSTER_LIFESTEAL He has been saving up energy for a lifesteal attack, and he uses it now.
+MONSTER_LIFESTEAL That attack especially angered him, and he responds with his dreaded lifesteal attack.
+MONSTER_LIFESTEAL He is enraged and casts a lifesteal spell on you.
+
+MONSTER_LEARNING Boss is learning your dodging. It will be harder to avoid his attacks now.
+MONSTER_LEARNING The Boss is observing your movements. His attacks will now be more difficult to avoid.
+MONSTER_LEARNING The Boss is irritated that his attack missed. He is learning your dodging so his future attacks are less likely to miss.
+MONSTER_LEARNING The Boss is figuring out your movements. Dodging his future attacks will be more challenging.
+
+MONSTER_DEFEATED You are able to kill the monster. He falls, letting you pass. You take a breather after this battle.
+MONSTER_DEFEATED The monster is killed. You can now pass. You take a breather after your battle.
+MONSTER_DEFEATED You finally kill the monster. You can now pass through the room he was in. You take a breather after this battle.
+MONSTER_DEFEATED The monster is slain. There is nothing remaining in the room he was guarding other than his corpse, so you can just pass through. You take a breather after your battle.
+MONSTER_DEFEATED You finally slay the monster. With him out of the way, you can pass. You take a breather after your brawl.
+MONSTER_DEFEATED The monster is now dead. Since he is no longer a threat, you can pass through the room he previously inhabited. You take a breather after your brawl.
+MONSTER_DEFEATED The monster is defeated. With this victory, you can pass through the chamber he was in. You take a breather after your duel.
+MONSTER_DEFEATED At last, you kill the monster. With this threat out of the way, the chamber is safe to pass through. You take a breather after your duel.
+MONSTER_DEFEATED The monster has been vanquished. He falls, letting you pass through the room he was in. You take a breather after your brawl.
+MONSTER_DEFEATED You finally dispatch the monster. You can now pass. You take a breather after your duel.
+MONSTER_DEFEATED You finish off the monster. You won't need to worry about him anymore. You feel relieved that the battle is over.
+
+RUN Ok, you run, like a coward, back to the previous room. What do you do?
+RUN You flee from the monster and are now back in the previous room. What do you do?
+RUN You run, scared, from the monster and end up back in the previous room. What do you do?
+RUN You flee back into the room you originally came from. What do you do?
+RUN You decide that the monster is too scary to fight and retreat into the room you came from. What do you do?
+RUN Despite being a brave adventurer, you make a cowardly retreat from the monster, returning to the room you were previously in. What do you do?
+RUN You don't feel like fighting the monster at this moment and run back to the previous room. What do you do?
+RUN You decide that running from the monster is the best option and retreat to the chamber you came from. What do you do?
+RUN You run away from the monster and go back into the previous chamber. What do you do?
+RUN You escape from the monster, heading back to the previous room. What do you do?
+RUN Ok, you run, like a coward, and go back into the previous chamber. What do you do?
+RUN You bolt back into the room you originally came from. What do you do?
+RUN You flee as though you are horror-struck by the monster and are now back in the previous room. What do you do?
+RUN During your fight with the monster, you start panicking and run back to the previous chamber. What do you do?
+RUN You decide that fleeing from the monster is the right option for you and return to the previous room. What do you do?
+
+RUN_FAIL You attempt to run. However, the monster prevents you from escaping his lair.
+RUN_FAIL You can't run away. The monster has blocked your path.
+RUN_FAIL You try to exit this room. The monster won't let you leave, however, and he blocks the exit.
+RUN_FAIL Running doesn't work here. This monster is quick enough to block you.
+
+NO You choose not to take it. Do you leave the chest?
+NO You decide you don't want the chest_item___. Do you leave the chest?
+NO You decide against taking the chest's contents. Do you leave the chest?
+NO You are deciding not to take the chest_item___. Are you sure about this?
+
+YES_LEAVE_CHEST Ok, you leave the chest alone. What do you do now?
+YES_LEAVE_CHEST So you firmly decide to not take the chest's contents. What do you do now?
+YES_LEAVE_CHEST Ok, you choose to ignore the treasure chest. What do you do now?
+YES_LEAVE_CHEST So you don't have interest in the treasure chest. What will you do now? 
+YES_LEAVE_CHEST You've decided to leave the chest despite it still having treasure inside. Are you sure that was a good idea?
+
+YES_TAKE_WEAPON You drop your current weapon, the player_weapon___, and grab the chest_weapon___. 
+YES_TAKE_WEAPON You take the chest_weapon___ and leave your current weapon, the player_weapon___, behind. 
+YES_TAKE_WEAPON You leave your player_weapon___ behind and grab the chest_weapon___ as a replacement weapon.
+YES_TAKE_WEAPON You let go of your player_weapon___ and grab the chest_weapon___ to replace it. 
+
+TAKE_LONG_SWORD You can already tell that it is a more well-made weapon than a regular sword simply from looking and touching it.
+TAKE_LONG_SWORD You have not had it for much time, but it seems to be made of higher quality material than a regular sword.
+TAKE_LONG_SWORD From seeing it up close and holding it, it is obvious to you that this weapon is of superior quality compared to regular swords.
+TAKE_LONG_SWORD Observing the length and design of the blade, it appears to be a much more effective weapon to use against enemies than a regular sword.
+TAKE_LONG_SWORD Holding it, it is apparent that not only is this sword longer than regular swords, it is also of higher quality craftmanship.
+
+TAKE_STEEL_SWORD You can tell the steel of this sword is a much higher quality material than that found in a regular sword.
+TAKE_STEEL_SWORD This new weapon shows excellent craftmanship and makes regular swords look weak in comparison.
+TAKE_STEEL_SWORD You feel much more powerful by merely holding this steel sword.
+TAKE_STEEL_SWORD This sword seems specifically designed to quickly kill monsters and you feel more confident with it. 
+TAKE_STEEL_SWORD You realize you've never wielded a weapon of this high level of quality in any of your adventures.
+
+YES_TAKE_ITEM You take the chest_item___ and add it to your bag for later.
+YES_TAKE_ITEM You take the chest_item___ and add it to your inventory for later. 
+YES_TAKE_ITEM You grab the chest_item___, putting it in your bag.
+YES_TAKE_ITEM You grab the chest_item___ and put it in your bag.
+
+EMPTIED_CHEST The chest is now empty. What do you do now?
+EMPTIED_CHEST There is nothing left in the chest. What do you do now?
+EMPTIED_CHEST There is nothing else in this chest. What do you do now?
+EMPTIED_CHEST Now the chest is empty. What do you do now?
+EMPTIED_CHEST You've taken everything this chest contained. What will you do now?
+
+STRENGTHPOTION You take the strength potion. It tastes kinda nasty but in a good way. Shortly afterward, you begin feeling more powerful and stronger. What do you do now?
+STRENGTHPOTION You take your strength potion. Interestingly, it tastes good despite having some unpleasant qualities. After a moment, you notice that you are stronger than ever before. What do you do now?
+STRENGTHPOTION You drink the strength potion. It tastes somewhat nasty but in a good way. After a short period of time, you start feeling more powerful and stronger. What do you do now?
+STRENGTHPOTION You drink the strength potion. Interestingly, it tastes good despite having some unpleasant qualities. After a short period of time, you notice that you have more brawn than ever before. What do you do now?
+STRENGTHPOTION You drink a strength potion. It tastes a bit nasty but in a good way. Immediately after finishing it, your weapon starts feeling much lighter and easier to wield. What will you do now? 
+
+HEALTHPOTION You take the health potion. It tastes pretty good, like sweet candy. After a moment, you begin to feel a lot better and notice your bruises begin to heal. What do you do now?
+HEALTHPOTION You take your health potion. It has a pleasant sweet candy taste to it. After a moment, you begin to feel better and see your injuries healing away. What do you do now?
+HEALTHPOTION You drink the health potion. It tastes pretty good, like sweet candy. After a short time, you start to feel much better and notice your bruises start to heal. What do you do now?
+HEALTHPOTION You drink the health potion. It has a pleasant sweet candy taste to it. After a short time, you start to feel better and see your injuries healing away. What do you do now?
+HEALTHPOTION You drink your health potion. It tastes like sweet candy and you think it's delicious. A little while later, you feel rejuvenated and see your wounds begin to heal. What do you do now?
+HEALTHPOTION You take the health potion. It tastes like sweet candy and you think it's delicious. A short while later, you feel rejuvenated and notice your wounds healing away. What do you do now?
+
+HEALTHPOTION_MAXHEALTH After taking that health potion, you are back to full health. What do you do now?
+HEALTHPOTION_MAXHEALTH Drinking the health potion has brought you to full health. What do you do now?
+HEALTHPOTION_MAXHEALTH That health potion has allowed you to be at full health again. What do you do now?
+HEALTHPOTION_MAXHEALTH You are now at full health because of that health potion. What do you do now?
+
+POTION_FAIL You attempt to take a type___ potion, but you quickly realize you don't have one. Pick another option.
+POTION_FAIL You try to drink a type___ potion, but it turns out you don't have a type___ potion. Pick another option.
+POTION_FAIL You attempt to drink a type___ potion, but you quickly realize you don't have a type___ potion. Pick another option.
+POTION_FAIL You try to take a type___ potion, but it turns out you don't have one. Pick another option.
+POTION_FAIL You attempt to use a type___ potion, but you can't because you don't have one in your inventory. Pick another option.
+
+ENCOUNTER_MONSTER Oh no, you find yourself face to face with a monster_type___. He looks angry and has his monster_weapon___ ready to fight. Nothing you can do but fight then. You could try running but is that a good idea? What do you do?
+ENCOUNTER_MONSTER You find yourself a monster, a monster_type___! He looks tough and he's using his monster_weapon___. How do you proceed?
+ENCOUNTER_MONSTER You find yourself a monster, a monster_type___! He looks tough, especially with the monster_weapon___ he has. How do you proceed?
+ENCOUNTER_MONSTER You find yourself a monster, a monster_type___! He's got his monster_weapon___ up and looks pretty unfriendly. How do you proceed?
+ENCOUNTER_MONSTER Oh no, you find yourself a monster, a monster_type___! He has his monster_weapon___ ready and it doesn't look like he will just let you go by. How do you proceed?
+ENCOUNTER_MONSTER You encounter a monster_type___! He has his monster_weapon___ out and appears formidable. How do you proceed?
+ENCOUNTER_MONSTER You find yourself face to face with a monster_type___. It doesn't seem as though any form of negotiation will work. You also notice the monster's weapon, his monster_weapon___. What do you do?
+ENCOUNTER_MONSTER Oh no, you encounter a monster_type___! He sees you and prepares his monster_weapon___ to attack. What do you do?
+ENCOUNTER_MONSTER A fearsome monster_type___ lurks in the corner of this room! He is ready to attack with his monster_weapon___. What do you do?
+ENCOUNTER_MONSTER A fearsome monster_type___ lurks in the corner of this room! He is filled with bloodlust and has his monster_weapon___ prepared for an attack. What do you do?
+ENCOUNTER_MONSTER Yikes, there is a monster_type___ in this chamber! It doesn't seem as though you can negotiate with him, especially considering that he's prepping his monster_weapon___ for an attack. What do you do?
+ENCOUNTER_MONSTER Yikes, you find yourself a monster_type___! He and his monster_weapon___ are menacing. What do you do?
+ENCOUNTER_MONSTER You encounter a monster_type___! He looks intimidating and displays his monster_weapon___ in a show of force. How do you proceed?
+ENCOUNTER_MONSTER Oh no, you find yourself face to face with a monster_type___. He is not pleased about you being in his favorite room in the dungeon so he prepares his monster_weapon___ for an attack. What do you do?
+ENCOUNTER_MONSTER Yikes, you find yourself a monster, a monster_type___! He sees you as an intruder and prepares his monster_weapon___ for an attack. How do you proceed?
+ENCOUNTER_MONSTER There is a monster_type___ in this room! This room is his territory and you are invading it, so he gets his monster_weapon___ ready for battle. What do you do?
+ENCOUNTER_MONSTER You find something truly terrifying, a monster_type___! You see him posturing with his monster_weapon___. Clearly, he has no intention of becoming your friend. What will you do?
+ENCOUNTER_MONSTER The horror! You've encountered a monster_type___ in here! You are wary of his scary-looking monster_weapon___. Will you fight or will you run?
+ENCOUNTER_MONSTER The horror! A monster_type___ is lurking in this chamber! He's ready to battle potential challengers with his monster_weapon___. Lesser adventurers would cry and whimper at this sight. What will you do?
+
+ENCOUNTER_MONSTER2 You find the monster_type___ that you ran away from earlier still in this room. He still has his monster_weapon___ ready too. What do you do?
+ENCOUNTER_MONSTER2 You decide you've had enough of being afraid of that previously-encountered monster_type___ and confront him again. Based on the way he's holding his monster_weapon___, it looks like he was expecting you. What will you do?
+ENCOUNTER_MONSTER2 You go back to the monster_type___ you saw before for round 2. He is still angry and still has his monster_weapon___ out. How do you proceed?
+ENCOUNTER_MONSTER2 You remember this room. This is where you saw that monster_type___, and he's still here. He doesn't look any friendlier now. How do you proceed?
+ENCOUNTER_MONSTER2 You reenter the room where you saw a monster_type___ and that monster is still there. The room is his territory after all. What do you do?
+ENCOUNTER_MONSTER2 You return to that room with the monster_type___. He prepares to attack with his monster_weapon___ again. What will you do?
+ENCOUNTER_MONSTER2 This room, which you have been in before, still has the monster_type___ that you ran from in it. It is not a joyful reunion and he prepares his monster_weapon___ again. What do you do?
+ENCOUNTER_MONSTER2 This room has that monster_type___ that you ran away from earlier. It seems your prior cowardice has only made him angrier. How do you proceed?
+ENCOUNTER_MONSTER2 The monster_type___ that you fled from before is still in this room. He and his monster_weapon___ still look as menacing as ever. What will you do?
+ENCOUNTER_MONSTER2 You reenter that room where you saw a monster_type___ and see he's still there. He still doesn't want to peacefully negotiate with you. Will you run away again?
+ENCOUNTER_MONSTER2 You're back in the room where you previously found a monster_type___ and ran away. He hasn't left, and don't expect him to suddenly start treating you with kindness. Will you run this time too?
+
+ENCOUNTER_CHEST You find a chest just lying in the middle of the room! You excitedly open it to find a single item.
+ENCOUNTER_CHEST You find a chest in this room. You open it to find a single item.
+ENCOUNTER_CHEST You find a chest. You open it and find a single item.
+ENCOUNTER_CHEST This room contains a chest! You excitedly open it to find a single item.
+ENCOUNTER_CHEST This room contains a chest. It might be hiding something valuable, so you open it.
+ENCOUNTER_CHEST You find a treasure chest in this room. There could be something valuable inside, and therefore you open it with excitement.
+ENCOUNTER_CHEST There is a treasure chest in this chamber! You open the treasure chest and find a single item inside.
+ENCOUNTER_CHEST There is a treasure chest in here. You open it, revealing a single item inside.
+ENCOUNTER_CHEST Luckily for you, this room contains a chest! Opening it reveals its contents, a single item.
+ENCOUNTER_CHEST Congratulations, you found a treasure chest in this room! You lift its lid open and see a single item inside.
+
+ENCOUNTER_CHEST2 You return to this treasure chest room with second thoughts on what you left behind.
+ENCOUNTER_CHEST2 You reenter the room with the chest with contents you left untouched.
+ENCOUNTER_CHEST2 This is a room containing a chest; you were here before but ignored the contents of the chest then.
+ENCOUNTER_CHEST2 You remember this room: it has a treasure chest with contents you previously ignored.
+ENCOUNTER_CHEST2 You remember this chamber: it features a treasure chest, and last time you were here you neglected to take some treasure.
+ENCOUNTER_CHEST2 This room contains an open chest; you opened it earlier but didn't take everything from it.
+ENCOUNTER_CHEST2 There is a chest you opened in this room, but it still has treasure you didn't take.
+
+EMPTY_ROOM You find yourself in an empty room and you breathe a sigh of relief.
+EMPTY_ROOM You find yourself in an empty room.
+EMPTY_ROOM You enter an empty room, you breathe a sigh of relief.
+EMPTY_ROOM You enter an empty room.
+EMPTY_ROOM This is an empty room. Nothing of interest here.
+EMPTY_ROOM You arrive in an empty room.
+EMPTY_ROOM You arrive in an empty chamber.
+EMPTY_ROOM This is an empty room with no notable qualities.
+EMPTY_ROOM This room is empty, so while it may be boring, at least it is safe.
+EMPTY_ROOM You have reached an empty chamber utterly devoid of anything interesting.
+EMPTY_ROOM There is nothing of interest in this room.
+EMPTY_ROOM It's just an empty room.
+EMPTY_ROOM It's an empty chamber.
+EMPTY_ROOM You enter an empty room, and there's nothing of interest here.
+
+DEFEATED_MONSTER_ROOM You enter the room and see the body of a monster_type___ you previously fought.
+DEFEATED_MONSTER_ROOM You enter, see the remains of a monster_type___, and are reminded of bad memories of your fight with that monster.
+DEFEATED_MONSTER_ROOM You've been in this room before; it has the corpse of a monster_type___ you fought earlier.
+DEFEATED_MONSTER_ROOM You revisit a room with a monster_type___ you've already defeated.
+
+EMPTY_CHEST_ROOM You enter the room to find a chest but are reminded that you were here before and it is empty.
+EMPTY_CHEST_ROOM You enter to see the chest that you emptied long ago.
+EMPTY_CHEST_ROOM A chest that you emptied previously is in this room.
+EMPTY_CHEST_ROOM Nothing here other than a chest you already emptied.
+
+ROOM_MOVE1 From here, you can only go direction___.
+ROOM_MOVE1 You can only move direction___ from this room.
+ROOM_MOVE1 From here, the only direction to go is direction___.
+ROOM_MOVE1 There is only one direction of movement from here: direction___.
+
+ROOM_MOVE2 From here, you can go two directions: direction1___ or direction2___.
+ROOM_MOVE2 You can move either direction1___ or direction2___ from this room.
+ROOM_MOVE2 From here, the two directions to go are direction1___ or direction2___.
+ROOM_MOVE2 You have two directions for possible movement: direction1___ or direction2___.
+
+ROOM_MOVE3 From here, you have three options for movement: direction1___, direction2___, or direction3___.
+ROOM_MOVE3 You can move direction1___, direction2___, or direction3___ from this room.
+ROOM_MOVE3 Three directions of movement are possible from here: direction1___, direction2___, or direction3___.
+ROOM_MOVE3 You can choose from three directions for your next move: direction1___, direction2___, or direction3___.
+
+GENERIC_POTION_DESCRIPTION The item is a vial of color___ liquid with a potion_type___ Potion label.
+GENERIC_POTION_DESCRIPTION This item is a vial of color___ liquid sporting a label identifying it as a potion_type___ Potion.
+GENERIC_POTION_DESCRIPTION The item is a vial of some color___ liquid, and you look at the label and learn that it's a potion_type___ Potion.
+GENERIC_POTION_DESCRIPTION This item is a vial of some color___ fluid that bears a potion_type___ Potion label.
+
+ENCOUNTERED_POTION There's a potion_type___ Potion there.
+ENCOUNTERED_POTION The chest contains a potion_type___ Potion.
+ENCOUNTERED_POTION You find inside a potion_type___ Potion.
+ENCOUNTERED_POTION You see a potion_type___ Potion inside.
+
+STRENGTH_POTION_DESCRIPTION This potion would make you permanently stronger. Do you take it?
+STRENGTH_POTION_DESCRIPTION If you consume this potion, your strength level will be permanently higher. Do you take it?
+STRENGTH_POTION_DESCRIPTION The Strength Potion will permanently enhance your might, increasing the amount of damage you can do. Do you take it?
+STRENGTH_POTION_DESCRIPTION This Strength Potion would permanently make your physical power higher, increasing the amount of damage you do when using your weapon. Do you take it?
+
+HEALTH_POTION_DESCRIPTION The Health Potion grants a moderate amount of health. Do you take it?
+HEALTH_POTION_DESCRIPTION You know that this potion will restore a moderate amount of health when you are injured. Do you take it?
+HEALTH_POTION_DESCRIPTION If you consume the potion and your health is below its maximum, you will have a moderate amount of health restored. Do you take it?
+HEALTH_POTION_DESCRIPTION This Health Potion will restore a moderate amount of health when your health is down. Do you take it?
+
+LONG_SWORD_DESCRIPTION There's a long sword inside. This long sword is longer than a regular sword so it does more damage to your enemies, however, you only have room for one weapon so if you take it, you have to drop your current weapon. Do you take it?
+LONG_SWORD_DESCRIPTION This chest contains a long sword. It is longer and more powerful than a regular sword, but you can only carry one weapon so if you take it, you must drop your current weapon. Do you take it?
+LONG_SWORD_DESCRIPTION The chest has a long sword. Longer than a regular sword, it is also more powerful, but in order to take it, you need to drop your current weapon because you are only able to carry one weapon. Do you take it?
+LONG_SWORD_DESCRIPTION You find a long sword inside. It deals superior damage to enemies compared to a regular sword; however, taking it requires you to drop your current weapon. Do you take it?
+
+STEEL_SWORD_DESCRIPTION There's a steel sword inside. This steel sword is stronger than a regular sword, and even stronger than a long sword, however, you can only carry one weapon so if you take it, you have to drop your current weapon. Do you take it?
+STEEL_SWORD_DESCRIPTION This chest contains a steel sword. It is more powerful than both a regular sword and a long sword, but you only have room for a single weapon so if you take it, you must drop your current weapon. Do you take it?
+STEEL_SWORD_DESCRIPTION The chest has a steel sword. It is much stronger than a regular sword and moderately stronger than a long sword, but in order to take it, you need to drop your current weapon because you are only able to carry one weapon. Do you take it?
+STEEL_SWORD_DESCRIPTION You find a steel sword inside. This is an exceptionally strong and rare sword that is superior to both regular swords and long swords, but if you take it, you must drop your current weapon. Do you take it?
+
+SHOW_HEALTH This is the current amount of health you have.
+SHOW_HEALTH Here is how much health you have remaining.
+SHOW_HEALTH Here is your current amount of health.
+SHOW_HEALTH This is your current amount of health.
+SHOW_HEALTH This is how much health you have remaining.
+
+SHOW_INVENTORY These are the items in your inventory.
+SHOW_INVENTORY You have the following items in your bag.
+SHOW_INVENTORY You are carrying the following items.
+SHOW_INVENTORY These are the items in your bag.
+SHOW_INVENTORY These are the items you are carrying.
