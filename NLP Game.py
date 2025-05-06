@@ -962,7 +962,7 @@ class Game:
         self.dungeon[3][3].contents.health = 100
         self.dungeon[1][4].contents.health = 110
         self.dungeon[4][2].contents.health = 80
-        self.dungeon[4][4].contents.health = 200
+        self.dungeon[4][4].contents.health = 220
     
     def generate_map(self):        
         generated_sentence = self.sentence_gen3(unigrams_dict, bigrams_dict, trigrams_dict, N, V, 'MAP')
@@ -1225,11 +1225,17 @@ class Game:
                     generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'DEFEATED_MONSTER_ROOM', '.', 1)
                     generated_sentence = generated_sentence.replace("monster_type___", self.dungeonCopy[x][y].contents.mType)
                     print(generated_sentence)
+                    generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'GENERAL_QUESTION', '?', 1)
+                    print(generated_sentence)
                 elif isinstance(self.dungeonCopy[x][y].contents, Chest):
                     generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'EMPTY_CHEST_ROOM', '.', 1)                    
                     print(generated_sentence)
+                    generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'GENERAL_QUESTION', '?', 1)
+                    print(generated_sentence)
                 else:
                     generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'EMPTY_ROOM', '.', 1)
+                    print(generated_sentence)
+                    generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'GENERAL_QUESTION', '?', 1)
                     print(generated_sentence)
                 if self.dungeon[x][y].walls == 7:
                     generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict,  sixgrams_dict, N, V, 'ROOM_MOVE1', '.', 1)
@@ -1381,7 +1387,7 @@ class Game:
                             print(generated_sentence)
                     else:
                         print("No")
-                        generated_sentence = self.sentence_gen_four(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, N, V, 'POTION_FAIL', '.', 1)
+                        generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'POTION_FAIL', '.', 1)
                         generated_sentence = generated_sentence.replace("type___", "health")
                         print(generated_sentence)
                 elif "strength" in self.dictionary.get(parser["Direct Object"].split()[0], [""]):
@@ -1395,7 +1401,7 @@ class Game:
                         self.player.inventory.remove(strength_potions[0])
                     else:
                         print("No")
-                        generated_sentence = self.sentence_gen_four(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, N, V, 'POTION_FAIL', '.', 1)
+                        generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'POTION_FAIL', '.', 1)
                         generated_sentence = generated_sentence.replace("type___", "strength")
                         print(generated_sentence)
         elif "show" in self.dictionary.get(parser["Action"], [""]) and parser["Direct Object"] != None:
@@ -1418,7 +1424,8 @@ class Game:
         
     def fight(self, monster):
         while 0 < self.player.health and 0 < monster.health:
-            print(self.player.health, monster.health)
+            print("\n")
+            print("Player's health:", self.player.health, "\nEnemy's health:", monster.health)
             print("\n")
             playerInput = input("")
             parser = self.inputParser(playerInput)
@@ -1525,6 +1532,7 @@ class Game:
                             print(generated_sentence)
                         break
                     
+                    print("\n")
                     #Monster move
                     if monster.isStuned:
                         generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'STUN_WEAR_OFF', '.', 1)
@@ -1610,7 +1618,7 @@ class Game:
                                 print(generated_sentence)
                         else:
                             print("No")
-                            generated_sentence = self.sentence_gen_four(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, N, V, 'POTION_FAIL', '.', 1)
+                            generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'POTION_FAIL', '.', 1)
                             generated_sentence = generated_sentence.replace("type___", "health")
                             print(generated_sentence) 
                         
@@ -1630,7 +1638,7 @@ class Game:
                             self.player.inventory.remove(strength_potions[0])
                         else:
                             print("No")
-                            generated_sentence = self.sentence_gen_four(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, N, V, 'POTION_FAIL', '.', 1)
+                            generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'POTION_FAIL', '.', 1)
                             generated_sentence = generated_sentence.replace("type___", "strength")
                             print(generated_sentence)
                         
@@ -1743,8 +1751,10 @@ class Game:
                         if random.random() < stun.chance:
                             generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'STUN_ATTEMPT_SUCCESS', '.', 1)
                             print(generated_sentence)
-                            print("stunned enemy")
+                            #print("stunned enemy")
                             playerDamage = random.randint(stun.minDamage, stun.maxDamage)
+                            generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'STUN_DAMAGE', '.', 1)
+                            print(generated_sentence)
                             print("Player Stun Damage:",playerDamage)
                             monster.health -= playerDamage
                             monster.isStuned = True
@@ -1830,17 +1840,22 @@ class Game:
                                     generated_sentence = generated_sentence.replace("direction3___", "right")
                                     print(generated_sentence)
                                 break
+                            generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'GENERAL_QUESTION', '?', 1)
+                            print(generated_sentence)
                             
                         else:
                             generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'STUN_ATTEMPT_FAIL', '.', 1)
                             print(generated_sentence)
-                            print("didn't stun enemy")
+                            #print("didn't stun enemy")
                             if monster.isStuned:
                                 generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'STUN_WEAR_OFF', '.', 1)
                                 print(generated_sentence)
                                 #print("Monster is no longer stunned")
                                 monster.isStuned = False
+                                generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'GENERAL_QUESTION', '?', 1)
+                                print(generated_sentence)
                             else:
+                                print("\n")
                                 if random.random() <= self.player.dodge:
                                     generated_phrase1 = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'MONSTER_ATTACK_PART1', '@@', 1)
                                     generated_phrase1 = generated_phrase1.replace("monster_weapon___", monster.weapon.name.lower())
@@ -1880,7 +1895,7 @@ class Game:
                                     print("Game Over!")
                                     self.state = "Game Over"
                                     self.running = False
-                                    break
+                                    break                         
                         stun.cooldown = stun.refreshRate
                     else:                        
                         generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'SKILL_FAIL', '.', 1)
@@ -1901,7 +1916,7 @@ class Game:
                     if random.random() < fireball.chance:
                         generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'FIREBALL_ATTEMPT_SUCCESS', '.', 1)
                         print(generated_sentence)
-                        print("enemy fireballed")
+                        #print("enemy fireballed")
                         playerDamage = random.randint(fireball.minDamage, fireball.maxDamage)
                         print("Player Fireball Damage:",playerDamage)
                         monster.health -= playerDamage
@@ -1990,7 +2005,9 @@ class Game:
                     else:
                         generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'FIREBALL_ATTEMPT_FAIL', '.', 1)
                         print(generated_sentence)
-                        print("didn't hit enemy")
+                        #print("didn't hit enemy")
+                    generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'GENERAL_QUESTION', '?', 1)
+                    print(generated_sentence)
                     fireball.cooldown = fireball.refreshRate
                 else:
                     generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'SKILL_FAIL', '.', 1)
@@ -2014,7 +2031,7 @@ class Game:
                     elif item.name == "Steel Sword":
                         generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'STEEL_SWORD_DESCRIPTION', '?', 1)
                         print(generated_sentence)
-                    print("Take",item.name+"?")
+                    #print("Take",item.name+"?")
                 elif isinstance(item, Potion):                    
                     if item.type == "Strength":
                         if self.player.encounteredStrengthPotion == False:
@@ -2029,6 +2046,7 @@ class Game:
                             generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ENCOUNTERED_POTION', '.', 1)
                             generated_sentence = generated_sentence.replace("potion_type___", item.type) 
                             print(generated_sentence)
+                            print("Take",item.type,"Potion?")
                     elif item.type == "Health":
                         if self.player.encounteredHealthPotion == False:
                             self.player.encounteredHealthPotion = True
@@ -2042,7 +2060,7 @@ class Game:
                             generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ENCOUNTERED_POTION', '.', 1)
                             generated_sentence = generated_sentence.replace("potion_type___", item.type) 
                             print(generated_sentence)
-                    print("Take",item.type,"Potion?")
+                            print("Take",item.type,"Potion?")
                     
                 playerInput = input("")
                 
@@ -2171,7 +2189,12 @@ class Game:
     def endgame(self):
         monster = self.dungeon[4][4].contents
         
-        monsterAbilities = [Ability("ice shards", 3, 5, 1, 2, 0),
+        if self.difficulty == "Hard":
+            monsterAbilities = [Ability("ice shards", 3, 5, 1, 2, 0),
+                          Ability("frostbite", 10, 15, 1, 4, 0),
+                          Ability("lifesteal", 20, 30, 1, 4, 0)]
+        else:
+            monsterAbilities = [Ability("ice shards", 3, 5, 1, 2, 0),
                           Ability("frostbite", 10, 15, 1, 4, 0),
                           Ability("lifesteal", 20, 30, 1, 4, 0)]
         
@@ -2179,7 +2202,8 @@ class Game:
         frostbiteDamage = 0
         
         while 0 < self.player.health and 0 < monster.health:
-            print(self.player.health, monster.health)
+            print("\n")
+            print("Player's health:", self.player.health, "\nEnemy's health:", monster.health)
             print("\n")
             playerInput = input("")
             parser = self.inputParser(playerInput)
@@ -2236,6 +2260,7 @@ class Game:
                         self.running = False
                         break
                     
+                    print("\n")
                     #Monster move
                     if self.player.dodge > 0 and random.random() <= self.player.dodge:
                         generated_phrase1 = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'MONSTER_ATTACK_PART1', '@@', 1)
@@ -2379,7 +2404,7 @@ class Game:
                                 monsterAbilities[2].cooldown -= 1
                         else:
                             print("No")
-                            generated_sentence = self.sentence_gen_four(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, N, V, 'POTION_FAIL', '.', 1)
+                            generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'POTION_FAIL', '.', 1)
                             generated_sentence = generated_sentence.replace("type___", "health")
                             print(generated_sentence)  
                         
@@ -2404,7 +2429,7 @@ class Game:
                                 monsterAbilities[2].cooldown -= 1
                         else:
                             print("No")
-                            generated_sentence = self.sentence_gen_four(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, N, V, 'POTION_FAIL', '.', 1)
+                            generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'POTION_FAIL', '.', 1)
                             generated_sentence = generated_sentence.replace("type___", "strength")
                             print(generated_sentence)
             elif "run" in self.dictionary.get(parser["Action"], [""]):
@@ -2433,9 +2458,13 @@ class Game:
                         playerDamage = random.randint(stun.minDamage, stun.maxDamage)
                         generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'STUN_ATTEMPT_BOSS', '.', 1)
                         print(generated_sentence)
+                        generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'STUN_DAMAGE_BOSS', '.', 1)
+                        print(generated_sentence)
                         print("Player Stun Damage:",playerDamage)
                         monster.health -= playerDamage
-                        print("stun attack doesn't work")
+                        #print("stun attack doesn't work")
+                        generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'GENERAL_QUESTION', '?', 1)
+                        print(generated_sentence)
                         stun.cooldown = stun.refreshRate
                         
                         if monster.health <= 0:
@@ -2465,7 +2494,7 @@ class Game:
                     if random.random() < fireball.chance:
                         generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'FIREBALL_ATTEMPT_SUCCESS', '.', 1)
                         print(generated_sentence)
-                        print("enemy fireballed")
+                        #print("enemy fireballed")
                         playerDamage = random.randint(fireball.minDamage, fireball.maxDamage)
                         print("Player Fireball Damage:",playerDamage)
                         monster.health -= playerDamage
@@ -2480,7 +2509,7 @@ class Game:
                     else:
                         generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'FIREBALL_ATTEMPT_FAIL', '.', 1)
                         print(generated_sentence)
-                        print("didn't hit enemy")
+                        #print("didn't hit enemy")
                         
                     if gotFrostbite:
                         generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'FROSTBITE_CURE', '.', 1)
@@ -2488,6 +2517,8 @@ class Game:
                         #print("Using fireball removed inflicted frostbite")
                         gotFrostbite = False
                         frostbiteDamage = 0
+                    generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'GENERAL_QUESTION', '?', 1)
+                    print(generated_sentence)
                     fireball.cooldown = fireball.refreshRate
                 else:
                     generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'SKILL_FAIL', '.', 1)
@@ -2584,7 +2615,7 @@ class Game:
             if adj:
                 prsi = f"{adj} {prsi}"
 
-        print({"Action": prsa, "Direct Object": prso, "Indirect Object": prsi})
+        #print({"Action": prsa, "Direct Object": prso, "Indirect Object": prsi})
 
         return {
             "Action": prsa,
@@ -2598,6 +2629,7 @@ class Game:
         print("Please select a difficulty level for the game. You have the following options:")
         print("normal")
         print("hard")
+        print("\n")
         playerInput = input("")
         
         while playerInput.lower() != "normal" and playerInput.lower() != "hard":
@@ -2623,7 +2655,7 @@ class Game:
         print(generated_sentence)
         
         while self.running:
-            print(self.state)
+            #print(self.state)
             
             if self.state == "Move":
                 self.move()
