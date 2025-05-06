@@ -9,6 +9,7 @@ import copy
 
 load_model = spacy.load('en_core_web_sm')
 
+
 file = 'cs6320gameText.txt'
 text = open(file, encoding = "utf8").read()
 nlp = load_model(text)
@@ -1747,6 +1748,89 @@ class Game:
                             print("Player Stun Damage:",playerDamage)
                             monster.health -= playerDamage
                             monster.isStuned = True
+                            
+                            if monster.health <= 0:
+                                generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'MONSTER_DEFEATED', '.', 3)
+                                print(generated_sentence)
+                                print("Enemy defeated!")
+                                print("\n")
+                                x,y = self.currentRoom
+                                self.dungeon[x][y].contents = None
+                                for ability in self.player.abilities:
+                                    ability.cooldown = 0
+                                self.state = "Move"
+                                if self.dungeon[x][y].walls == 7:
+                                    generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict,  sixgrams_dict, N, V, 'ROOM_MOVE1', '.', 1)
+                                    generated_sentence = generated_sentence.replace("direction___", "up")
+                                    print(generated_sentence)
+                                elif self.dungeon[x][y].walls == 11:
+                                    generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict,  sixgrams_dict, N, V, 'ROOM_MOVE1', '.', 1)
+                                    generated_sentence = generated_sentence.replace("direction___", "right")
+                                    print(generated_sentence)
+                                elif self.dungeon[x][y].walls == 13:
+                                    generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict,  sixgrams_dict, N, V, 'ROOM_MOVE1', '.', 1)
+                                    generated_sentence = generated_sentence.replace("direction___", "down")
+                                    print(generated_sentence)
+                                elif self.dungeon[x][y].walls == 14:
+                                    generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict,  sixgrams_dict, N, V, 'ROOM_MOVE1', '.', 1)
+                                    generated_sentence = generated_sentence.replace("direction___", "left")
+                                    print(generated_sentence)
+                                elif self.dungeon[x][y].walls == 3:
+                                    generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict,  sixgrams_dict, N, V, 'ROOM_MOVE2', '.', 1)
+                                    generated_sentence = generated_sentence.replace("direction1___", "right")
+                                    generated_sentence = generated_sentence.replace("direction2___", "up")
+                                    print(generated_sentence)
+                                elif self.dungeon[x][y].walls == 5:
+                                    generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict,  sixgrams_dict, N, V, 'ROOM_MOVE2', '.', 1)
+                                    generated_sentence = generated_sentence.replace("direction1___", "down")
+                                    generated_sentence = generated_sentence.replace("direction2___", "up")
+                                    print(generated_sentence)
+                                elif self.dungeon[x][y].walls == 6:
+                                    generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ROOM_MOVE2', '.', 1)
+                                    generated_sentence = generated_sentence.replace("direction1___", "left")
+                                    generated_sentence = generated_sentence.replace("direction2___", "up")
+                                    print(generated_sentence)
+                                elif self.dungeon[x][y].walls == 9:
+                                    generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ROOM_MOVE2', '.', 1)
+                                    generated_sentence = generated_sentence.replace("direction1___", "down")
+                                    generated_sentence = generated_sentence.replace("direction2___", "right")
+                                    print(generated_sentence)
+                                elif self.dungeon[x][y].walls == 10:
+                                    generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ROOM_MOVE2', '.', 1)
+                                    generated_sentence = generated_sentence.replace("direction1___", "left")
+                                    generated_sentence = generated_sentence.replace("direction2___", "right")
+                                    print(generated_sentence)
+                                elif self.dungeon[x][y].walls == 12:
+                                    generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ROOM_MOVE2', '.', 1)
+                                    generated_sentence = generated_sentence.replace("direction1___", "left")
+                                    generated_sentence = generated_sentence.replace("direction2___", "down")
+                                    print(generated_sentence)
+                                elif self.dungeon[x][y].walls == 1:
+                                    generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ROOM_MOVE3', '.', 1)
+                                    generated_sentence = generated_sentence.replace("direction1___", "down")
+                                    generated_sentence = generated_sentence.replace("direction2___", "right")
+                                    generated_sentence = generated_sentence.replace("direction3___", "up")
+                                    print(generated_sentence)
+                                elif self.dungeon[x][y].walls == 2:
+                                    generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ROOM_MOVE3', '.', 1)
+                                    generated_sentence = generated_sentence.replace("direction1___", "left")
+                                    generated_sentence = generated_sentence.replace("direction2___", "right")
+                                    generated_sentence = generated_sentence.replace("direction3___", "up")
+                                    print(generated_sentence)
+                                elif self.dungeon[x][y].walls == 4:
+                                    generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ROOM_MOVE3', '.', 1)
+                                    generated_sentence = generated_sentence.replace("direction1___", "left")
+                                    generated_sentence = generated_sentence.replace("direction2___", "down")
+                                    generated_sentence = generated_sentence.replace("direction3___", "up")
+                                    print(generated_sentence)
+                                elif self.dungeon[x][y].walls == 8:
+                                    generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ROOM_MOVE3', '.', 1)
+                                    generated_sentence = generated_sentence.replace("direction1___", "left")
+                                    generated_sentence = generated_sentence.replace("direction2___", "down")
+                                    generated_sentence = generated_sentence.replace("direction3___", "right")
+                                    print(generated_sentence)
+                                break
+                            
                         else:
                             generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'STUN_ATTEMPT_FAIL', '.', 1)
                             print(generated_sentence)
@@ -1821,6 +1905,88 @@ class Game:
                         playerDamage = random.randint(fireball.minDamage, fireball.maxDamage)
                         print("Player Fireball Damage:",playerDamage)
                         monster.health -= playerDamage
+                        
+                        if monster.health <= 0:
+                            generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'MONSTER_DEFEATED', '.', 3)
+                            print(generated_sentence)
+                            print("Enemy defeated!")
+                            print("\n")
+                            x,y = self.currentRoom
+                            self.dungeon[x][y].contents = None
+                            for ability in self.player.abilities:
+                                ability.cooldown = 0
+                            self.state = "Move"
+                            if self.dungeon[x][y].walls == 7:
+                                generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict,  sixgrams_dict, N, V, 'ROOM_MOVE1', '.', 1)
+                                generated_sentence = generated_sentence.replace("direction___", "up")
+                                print(generated_sentence)
+                            elif self.dungeon[x][y].walls == 11:
+                                generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict,  sixgrams_dict, N, V, 'ROOM_MOVE1', '.', 1)
+                                generated_sentence = generated_sentence.replace("direction___", "right")
+                                print(generated_sentence)
+                            elif self.dungeon[x][y].walls == 13:
+                                generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict,  sixgrams_dict, N, V, 'ROOM_MOVE1', '.', 1)
+                                generated_sentence = generated_sentence.replace("direction___", "down")
+                                print(generated_sentence)
+                            elif self.dungeon[x][y].walls == 14:
+                                generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict,  sixgrams_dict, N, V, 'ROOM_MOVE1', '.', 1)
+                                generated_sentence = generated_sentence.replace("direction___", "left")
+                                print(generated_sentence)
+                            elif self.dungeon[x][y].walls == 3:
+                                generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict,  sixgrams_dict, N, V, 'ROOM_MOVE2', '.', 1)
+                                generated_sentence = generated_sentence.replace("direction1___", "right")
+                                generated_sentence = generated_sentence.replace("direction2___", "up")
+                                print(generated_sentence)
+                            elif self.dungeon[x][y].walls == 5:
+                                generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict,  sixgrams_dict, N, V, 'ROOM_MOVE2', '.', 1)
+                                generated_sentence = generated_sentence.replace("direction1___", "down")
+                                generated_sentence = generated_sentence.replace("direction2___", "up")
+                                print(generated_sentence)
+                            elif self.dungeon[x][y].walls == 6:
+                                generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ROOM_MOVE2', '.', 1)
+                                generated_sentence = generated_sentence.replace("direction1___", "left")
+                                generated_sentence = generated_sentence.replace("direction2___", "up")
+                                print(generated_sentence)
+                            elif self.dungeon[x][y].walls == 9:
+                                generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ROOM_MOVE2', '.', 1)
+                                generated_sentence = generated_sentence.replace("direction1___", "down")
+                                generated_sentence = generated_sentence.replace("direction2___", "right")
+                                print(generated_sentence)
+                            elif self.dungeon[x][y].walls == 10:
+                                generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ROOM_MOVE2', '.', 1)
+                                generated_sentence = generated_sentence.replace("direction1___", "left")
+                                generated_sentence = generated_sentence.replace("direction2___", "right")
+                                print(generated_sentence)
+                            elif self.dungeon[x][y].walls == 12:
+                                generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ROOM_MOVE2', '.', 1)
+                                generated_sentence = generated_sentence.replace("direction1___", "left")
+                                generated_sentence = generated_sentence.replace("direction2___", "down")
+                                print(generated_sentence)
+                            elif self.dungeon[x][y].walls == 1:
+                                generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ROOM_MOVE3', '.', 1)
+                                generated_sentence = generated_sentence.replace("direction1___", "down")
+                                generated_sentence = generated_sentence.replace("direction2___", "right")
+                                generated_sentence = generated_sentence.replace("direction3___", "up")
+                                print(generated_sentence)
+                            elif self.dungeon[x][y].walls == 2:
+                                generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ROOM_MOVE3', '.', 1)
+                                generated_sentence = generated_sentence.replace("direction1___", "left")
+                                generated_sentence = generated_sentence.replace("direction2___", "right")
+                                generated_sentence = generated_sentence.replace("direction3___", "up")
+                                print(generated_sentence)
+                            elif self.dungeon[x][y].walls == 4:
+                                generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ROOM_MOVE3', '.', 1)
+                                generated_sentence = generated_sentence.replace("direction1___", "left")
+                                generated_sentence = generated_sentence.replace("direction2___", "down")
+                                generated_sentence = generated_sentence.replace("direction3___", "up")
+                                print(generated_sentence)
+                            elif self.dungeon[x][y].walls == 8:
+                                generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ROOM_MOVE3', '.', 1)
+                                generated_sentence = generated_sentence.replace("direction1___", "left")
+                                generated_sentence = generated_sentence.replace("direction2___", "down")
+                                generated_sentence = generated_sentence.replace("direction3___", "right")
+                                print(generated_sentence)
+                            break
                     else:
                         generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'FIREBALL_ATTEMPT_FAIL', '.', 1)
                         print(generated_sentence)
@@ -2271,6 +2437,14 @@ class Game:
                         monster.health -= playerDamage
                         print("stun attack doesn't work")
                         stun.cooldown = stun.refreshRate
+                        
+                        if monster.health <= 0:
+                            generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'MONSTER_DEFEATED', '.', 3)
+                            print(generated_sentence)
+                            print("Enemy defeated! You escaped the dungeon!")
+                            self.state = "Game Over"
+                            self.running = False
+                            break
                     else:
                         generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'SKILL_FAIL', '.', 1)
                         generated_sentence = generated_sentence.replace("skill___", "stun")
@@ -2295,6 +2469,14 @@ class Game:
                         playerDamage = random.randint(fireball.minDamage, fireball.maxDamage)
                         print("Player Fireball Damage:",playerDamage)
                         monster.health -= playerDamage
+                        
+                        if monster.health <= 0:
+                            generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'MONSTER_DEFEATED', '.', 3)
+                            print(generated_sentence)
+                            print("Enemy defeated! You escaped the dungeon!")
+                            self.state = "Game Over"
+                            self.running = False
+                            break
                     else:
                         generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'FIREBALL_ATTEMPT_FAIL', '.', 1)
                         print(generated_sentence)
@@ -2462,6 +2644,9 @@ class Game:
 if __name__ == "__main__":
     game = Game()
     game.play()
+    
+    
+    
     
     
     
