@@ -270,6 +270,7 @@ MONSTER_LEARNING Boss is learning your dodging. It will be harder to avoid his a
 MONSTER_LEARNING The Boss is observing your movements. His attacks will now be more difficult to avoid.
 MONSTER_LEARNING The Boss is irritated that his attack missed. He is learning your dodging so his future attacks are less likely to miss.
 MONSTER_LEARNING The Boss is figuring out your movements. Dodging his future attacks will be more challenging.
+MONSTER_LEARNING The Boss is learning your dodging. His attacks will now be harder to avoid.
 
 MONSTER_DEFEATED You are able to kill the monster. He falls, letting you pass. You take a breather after this battle.
 MONSTER_DEFEATED The monster is killed. You can now pass. You take a breather after your battle.
@@ -303,6 +304,7 @@ RUN_FAIL You attempt to run. However, the monster prevents you from escaping his
 RUN_FAIL You can't run away. The monster has blocked your path.
 RUN_FAIL You try to exit this room. The monster won't let you leave, however, and he blocks the exit.
 RUN_FAIL Running doesn't work here. This monster is quick enough to block you.
+RUN_FAIL You attempt to run. However, the monster has blocked your path.
 
 NO You choose not to take it. Do you leave the chest?
 NO You decide you don't want the chest_item___. Do you leave the chest?
@@ -336,6 +338,7 @@ YES_TAKE_ITEM You take the chest_item___ and add it to your bag for later.
 YES_TAKE_ITEM You take the chest_item___ and add it to your inventory for later. 
 YES_TAKE_ITEM You grab the chest_item___, putting it in your bag.
 YES_TAKE_ITEM You grab the chest_item___ and put it in your bag.
+YES_TAKE_ITEM You place the chest_item___ in your bag.
 
 EMPTIED_CHEST The chest is now empty. What do you do now?
 EMPTIED_CHEST There is nothing left in the chest. What do you do now?
@@ -467,6 +470,7 @@ ENCOUNTERED_POTION There's a potion_type___ Potion there.
 ENCOUNTERED_POTION The chest contains a potion_type___ Potion.
 ENCOUNTERED_POTION You find inside a potion_type___ Potion.
 ENCOUNTERED_POTION You see a potion_type___ Potion inside.
+ENCOUNTERED_POTION This chest has a potion_type___ Potion.
 
 STRENGTH_POTION_DESCRIPTION This potion would make you permanently stronger. Do you take it?
 STRENGTH_POTION_DESCRIPTION If you consume this potion, your strength level will be permanently higher. Do you take it?
@@ -488,17 +492,24 @@ STEEL_SWORD_DESCRIPTION This chest contains a steel sword. It is more powerful t
 STEEL_SWORD_DESCRIPTION The chest has a steel sword. It is much stronger than a regular sword and moderately stronger than a long sword, but in order to take it, you need to drop your current weapon because you are only able to carry one weapon. Do you take it?
 STEEL_SWORD_DESCRIPTION You find a steel sword inside. This is an exceptionally strong and rare sword that is superior to both regular swords and long swords, but if you take it, you must drop your current weapon. Do you take it?
 
-SHOW_HEALTH This is the current amount of health you have.
-SHOW_HEALTH Here is how much health you have remaining.
-SHOW_HEALTH Here is your current amount of health.
-SHOW_HEALTH This is your current amount of health.
-SHOW_HEALTH This is how much health you have remaining.
+SHOW_HEALTH This is the current amount of health you have: health___.
+SHOW_HEALTH Here is how much health you have remaining: health___.
+SHOW_HEALTH Here is your current amount of health: health___.
+SHOW_HEALTH This is your current amount of health: health___.
+SHOW_HEALTH This is how much health you have remaining: health___.
 
 SHOW_INVENTORY These are the items in your inventory.
 SHOW_INVENTORY You have the following items in your bag.
 SHOW_INVENTORY You are carrying the following items.
 SHOW_INVENTORY These are the items in your bag.
 SHOW_INVENTORY These are the items you are carrying.
+
+NO_ITEMS You have no items.
+NO_ITEMS You're not carrying any items.
+NO_ITEMS Your item bag is empty.
+NO_ITEMS You have nothing in your inventory.
+NO_ITEMS You have nothing in your bag.
+NO_ITEMS You aren't carrying any items.
 
 GENERAL_QUESTION What will you do now?
 GENERAL_QUESTION What do you do next?
