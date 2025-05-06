@@ -418,7 +418,7 @@ ENCOUNTER_CHEST Luckily for you, this room contains a chest! Opening it reveals 
 ENCOUNTER_CHEST Congratulations, you found a treasure chest in this room! You lift its lid open and see a single item inside.
 
 ENCOUNTER_CHEST2 You return to this treasure chest room with second thoughts on what you left behind.
-ENCOUNTER_CHEST2 You reenter the room with the chest with contents you left untouched.
+ENCOUNTER_CHEST2 You reenter a room with a chest with contents you left untouched.
 ENCOUNTER_CHEST2 This is a room containing a chest; you were here before but ignored the contents of the chest then.
 ENCOUNTER_CHEST2 You remember this room: it has a treasure chest with contents you previously ignored.
 ENCOUNTER_CHEST2 You remember this chamber: it features a treasure chest, and last time you were here you neglected to take some treasure.
