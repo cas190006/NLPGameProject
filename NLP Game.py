@@ -10,7 +10,7 @@ import copy
 load_model = spacy.load('en_core_web_sm')
 
 
-file = 'cs6320gameText.txt'
+file = 'textGeneratorData.txt'
 text = open(file, encoding = "utf8").read()
 nlp = load_model(text)
 
@@ -2290,9 +2290,14 @@ class Game:
                             probAbilities[0] -= 0.3
                             
                         if monsterAbilities[1].cooldown == 0:
-                            activeAbilities.append(monsterAbilities[1].name)
-                            probAbilities.append(0.1)
-                            probAbilities[0] -= 0.1
+                            if self.difficulty == "Hard":
+                                activeAbilities.append(monsterAbilities[1].name)
+                                probAbilities.append(0.2)
+                                probAbilities[0] -= 0.2
+                            else:
+                                activeAbilities.append(monsterAbilities[1].name)
+                                probAbilities.append(0.1)
+                                probAbilities[0] -= 0.1
                         
                         if monsterAbilities[2].cooldown == 0:
                             activeAbilities.append(monsterAbilities[2].name)
@@ -2338,13 +2343,13 @@ class Game:
                         elif monsterAction == "frostbite":                            
                             generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'MONSTER_FROSTBITE', '.', 1)
                             print(generated_sentence)
-                            enemyDamage = random.randint(monsterAbilities[1].minDamage, monsterAbilities[1].maxDamage)
+                            enemyDamage = random.randint(monsterAbilities[1].minDamage*2, monsterAbilities[1].maxDamage*2)
                             print("Enemy Damage:",enemyDamage)
                             self.player.health -= enemyDamage
                             
                             print("Got hit by an ice attack. Now you have frostbite")
                             if self.difficulty == "Hard":
-                                frostbiteDamage = random.randint(int(monsterAbilities[1].minDamage), int(monsterAbilities[1].maxDamage)) 
+                                frostbiteDamage = random.randint(int(monsterAbilities[1].minDamage*2), int(monsterAbilities[1].maxDamage*2)) 
                             else:
                                 frostbiteDamage = random.randint(int(monsterAbilities[1].minDamage/3), int(monsterAbilities[1].maxDamage/3))
                             gotFrostbite = True
