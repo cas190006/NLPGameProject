@@ -2041,8 +2041,10 @@ class Game:
                             generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'STRENGTH_POTION_DESCRIPTION', '?', 1)
                             print(generated_sentence)
                         else:
-                            generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ENCOUNTERED_POTION', '?', 1)
+                            generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ENCOUNTERED_POTION', '.', 1)
                             generated_sentence = generated_sentence.replace("potion_type___", item.type) 
+                            print(generated_sentence)
+                            generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'POTION_QUESTION', '?', 1)                            
                             print(generated_sentence)
                             #print("Take",item.type,"Potion?")
                     elif item.type == "Health":
@@ -2055,8 +2057,10 @@ class Game:
                             generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'HEALTH_POTION_DESCRIPTION', '?', 1)
                             print(generated_sentence)
                         else:
-                            generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ENCOUNTERED_POTION', '?', 1)
+                            generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ENCOUNTERED_POTION', '.', 1)
                             generated_sentence = generated_sentence.replace("potion_type___", item.type) 
+                            print(generated_sentence)
+                            generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'POTION_QUESTION', '?', 1)                            
                             print(generated_sentence)
                             #print("Take",item.type,"Potion?")
                     
