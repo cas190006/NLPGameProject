@@ -1434,7 +1434,7 @@ class Game:
                         generated_sentence = generated_sentence.replace("weapon_name___", game.player.weapon.name.lower())
                         generated_sentence = generated_sentence.replace("damage_type___", "critical damage")
                         print(generated_sentence)
-                        print("Player Critical!")
+                        #print("Player Critical!")
                         playerDamage = int(playerDamage * self.player.weapon.critical)
                         #crit_damage = int(base_damage * crit_multiplier)
                     else:
@@ -1753,7 +1753,7 @@ class Game:
                             playerDamage = random.randint(stun.minDamage, stun.maxDamage)
                             generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'STUN_DAMAGE', '.', 1)
                             print(generated_sentence)
-                            #print("Player Stun Damage:",playerDamage)
+                            print("Player Stun Damage:",playerDamage)
                             monster.health -= playerDamage
                             monster.isStuned = True
                             
@@ -1916,7 +1916,7 @@ class Game:
                         print(generated_sentence)
                         #print("enemy fireballed")
                         playerDamage = random.randint(fireball.minDamage, fireball.maxDamage)
-                        #print("Player Fireball Damage:",playerDamage)
+                        print("Player Fireball Damage:",playerDamage)
                         monster.health -= playerDamage
                         
                         if monster.health <= 0:
@@ -2041,7 +2041,7 @@ class Game:
                             generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'STRENGTH_POTION_DESCRIPTION', '?', 1)
                             print(generated_sentence)
                         else:
-                            generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ENCOUNTERED_POTION', '.', 1)
+                            generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ENCOUNTERED_POTION', '?', 1)
                             generated_sentence = generated_sentence.replace("potion_type___", item.type) 
                             print(generated_sentence)
                             #print("Take",item.type,"Potion?")
@@ -2055,7 +2055,7 @@ class Game:
                             generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'HEALTH_POTION_DESCRIPTION', '?', 1)
                             print(generated_sentence)
                         else:
-                            generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ENCOUNTERED_POTION', '.', 1)
+                            generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'ENCOUNTERED_POTION', '?', 1)
                             generated_sentence = generated_sentence.replace("potion_type___", item.type) 
                             print(generated_sentence)
                             #print("Take",item.type,"Potion?")
@@ -2466,7 +2466,7 @@ class Game:
                         print(generated_sentence)
                         generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'STUN_DAMAGE_BOSS', '.', 1)
                         print(generated_sentence)
-                        #print("Player Stun Damage:",playerDamage)
+                        print("Player Stun Damage:",playerDamage)
                         monster.health -= playerDamage
                         #print("stun attack doesn't work")
                         generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'GENERAL_QUESTION', '?', 1)
@@ -2502,7 +2502,7 @@ class Game:
                         print(generated_sentence)
                         #print("enemy fireballed")
                         playerDamage = random.randint(fireball.minDamage, fireball.maxDamage)
-                        #print("Player Fireball Damage:",playerDamage)
+                        print("Player Fireball Damage:",playerDamage)
                         monster.health -= playerDamage
                         
                         if monster.health <= 0:
