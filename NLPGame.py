@@ -2238,7 +2238,13 @@ class Game:
                         frostbiteDamage -= 1
                         if frostbiteDamage == 0:
                             gotFrostbite = False
-                    
+                        if self.player.health <= 0:
+                            generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'FROSTBITE_DEFEAT', '.', 1)
+                            print(generated_sentence)
+                            #print("You died. Game Over!")
+                            self.state = "Game Over"
+                            self.running = False
+                            break
                     if self.player.abilities[0].cooldown > 0:
                         self.player.abilities[0].cooldown -= 1
                         if self.player.abilities[0].cooldown == 0:
@@ -2258,6 +2264,8 @@ class Game:
                         generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'MONSTER_DEFEATED', '.', 3)
                         print(generated_sentence)
                         #print("Enemy defeated! You escaped the dungeon!")
+                        generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'GAME_COMPLETED', '.', 1)
+                        print(generated_sentence)
                         self.state = "Game Over"
                         self.running = False
                         break
@@ -2361,7 +2369,7 @@ class Game:
                             print(generated_sentence)
                             enemyDamage = random.randint(monsterAbilities[2].minDamage, monsterAbilities[2].maxDamage)
                             print("Your loss is his gain.", end=" ")
-                            print("You lose",enemyDamage,"and he heals.",enemyDamage,end=" ")
+                            print("You lose",enemyDamage,"and he heals",enemyDamage,end=". ")
                             self.player.health -= enemyDamage
                             monster.health += enemyDamage
                             monsterAbilities[2].cooldown = monsterAbilities[2].refreshRate+1
@@ -2472,18 +2480,21 @@ class Game:
                         print(generated_sentence)
                         print("Player Stun Damage:",playerDamage)
                         monster.health -= playerDamage
-                        #print("stun attack doesn't work")
-                        generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'GENERAL_QUESTION', '?', 1)
-                        print(generated_sentence)
+                        #print("stun attack doesn't work")                        
                         stun.cooldown = stun.refreshRate
                         
                         if monster.health <= 0:
                             generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'MONSTER_DEFEATED', '.', 3)
                             print(generated_sentence)
                             #print("Enemy defeated! You escaped the dungeon!")
+                            generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'GAME_COMPLETED', '.', 1)
+                            print(generated_sentence)
                             self.state = "Game Over"
                             self.running = False
                             break
+                        generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'GENERAL_QUESTION', '?', 1)
+                        print(generated_sentence)
+                        
                     else:
                         generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'SKILL_FAIL', '.', 1)
                         generated_sentence = generated_sentence.replace("skill___", "stun")
@@ -2511,8 +2522,10 @@ class Game:
                         
                         if monster.health <= 0:
                             generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'MONSTER_DEFEATED', '.', 3)
-                            print(generated_sentence)
+                            print(generated_sentence)                            
                             #print("Enemy defeated! You escaped the dungeon!")
+                            generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'GAME_COMPLETED', '.', 1)
+                            print(generated_sentence)
                             self.state = "Game Over"
                             self.running = False
                             break
