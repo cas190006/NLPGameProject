@@ -2,11 +2,16 @@ INAPPROPRIATE That doesn't seem like an appropriate action to take at the moment
 INAPPROPRIATE That is not a valid action for this situation. Please try again with another input.
 INAPPROPRIATE That action is irrelevant to the current scenario. Please try again using a different input.
 INAPPROPRIATE This action is inappropriate for this situation. Please try again using another input.
+INAPPROPRIATE This isn't an appropriate action to take at the moment. Please try a different action by entering another input.
+INAPPROPRIATE This action is irrelevant to the current scenario. Please try again with another input.
+INAPPROPRIATE That is not a valid action for this situation. Please try a different action by entering another input.
+INAPPROPRIATE That isn't an appropriate action to take at the moment. Please try again using a different input.
 
 GAME_START You've woken up in an empty room with only your sword, a map, an empty bag, and clothing that does not offer any extra protection from attacks. Where do you go? What do you do?
 GAME_START You wake up in an empty room, and you only have your sword, a map, an empty bag, and clothing that doesn't confer any defensive advantages. Where do you go? What do you do?
 GAME_START You awaken in an empty chamber and the only things you have are your sword, a map, an empty bag, and clothing that won't give you extra protection from attacks. Where do you go? What do you do?
 GAME_START You wake up and see you're in an empty room; you only have your sword, a map, an empty bag, and clothing that doesn't offer you any defensive advantages. Where do you go? What do you do?
+GAME_START You've woken up in an empty room and you only have your sword, a map, an empty bag, and clothing that won't give you extra protection from attacks. Where do you go? What do you do?
 
 MAP You check your map.
 MAP You examine your map.
@@ -47,6 +52,8 @@ MOVE_FAIL You can't go direction___. There is a wall in the way, and you can't g
 MOVE_FAIL You can't head direction___. A wall prevents you from moving direction___.
 MOVE_FAIL You can't move direction___. There is a wall there, and you can't get by it or break it down.
 MOVE_FAIL You can't travel direction___. There is a wall in the way, and nothing you do can get you past it.
+MOVE_FAIL You can't move direction___. There is a wall there, and you can't get past it.
+MOVE_FAIL You can't go direction___. A wall prevents you from going direction___.
 
 MOVE_FAIL2 You can't word___ direction___. There is a wall in the way, and you can't get past it.
 MOVE_FAIL2 You can't word___ direction___. A wall prevents you from moving direction___.
@@ -59,6 +66,7 @@ NEXT_ROOM You go onward to the next room.
 NEXT_ROOM You advance to the next room.
 NEXT_ROOM You progress on to the next room.
 NEXT_ROOM You venture to the next room.
+NEXT_ROOM You advance on to the next room.
 
 ATTACK You use your weapon_name___ and deal some damage_type___ to that monster.
 ATTACK You attack and deal damage_type___ this time, greatly hurting the monster.
@@ -76,18 +84,24 @@ ATTACK You beat up on the monster, dealing damage_type___.
 ATTACK You batter the monster with your weapon_name___ and deal damage_type___ to that monster.
 ATTACK You buffet the monster with your weapon_name___ and do damage_type___ to him.
 ATTACK You tear into the monster with your weapon_name___, causing him to take damage_type___.
+ATTACK You attack the monster with you weapon_name___, causing damage_type___ and hurting the monster.
+ATTACK You beat up on the monster with your weapon_name___ and deal damage_type___ to him.
 
 STUN_ATTEMPT You attempt to stun the monster.
 STUN_ATTEMPT You try to hinder the monster.
 STUN_ATTEMPT You attempt to make the monster stagger.
 STUN_ATTEMPT You use your stun skill to try to stun the monster.
 STUN_ATTEMPT You try to stun the monster.
+STUN_ATTEMPT You use your stun skill to try to daze the monster.
+STUN_ATTEMPT You attempt to daze the monster.
+STUN_ATTEMPT You try to daze the monster.
 
 STUN_ATTEMPT_SUCCESS You succeed in stunning him, and he won't be able to attack you next turn.
 STUN_ATTEMPT_SUCCESS You successfully stun him so he won't do anything for the following turn.
 STUN_ATTEMPT_SUCCESS He ends up getting stunned, losing his following turn.
 STUN_ATTEMPT_SUCCESS You temporarily paralyze the monster; therefore, he won't do anything during the next turn.
 STUN_ATTEMPT_SUCCESS The monster gets stunned and loses his following turn.
+STUN_ATTEMPT_SUCCESS The monster is dazed, losing his following turn.
 
 STUN_ATTEMPT_FAIL You are not able to stun him.
 STUN_ATTEMPT_FAIL He successfully resists getting stunned.
@@ -108,18 +122,21 @@ STUN_DAMAGE On top of being stunned, the monster suffers a bit of damage.
 STUN_DAMAGE While stunning him, you manage to deal a little damage.
 STUN_DAMAGE As a bonus, you slightly damage the monster.
 STUN_DAMAGE You even manage to slightly damage the monster in the process.
+STUN_DAMAGE As a bonus, your stun attack does a little damage.
 
 STUN_DAMAGE_BOSS Despite your stun failing, you do some damage.
 STUN_DAMAGE_BOSS However, even though he's immune to stuns, your attack does a low amount of damage to him.
 STUN_DAMAGE_BOSS You do manage to inflict a little damage, though.
 STUN_DAMAGE_BOSS He may not be stunned, but he does take a bit of damage.
 STUN_DAMAGE_BOSS However, your attack wasn't completely useless; the monster takes slight damage from it. 
+STUN_DAMAGE_BOSS Despite the stun failing, your stun attack manages to slightly damage the monster.
 
 STUN_WEAR_OFF The monster is no longer stunned.
 STUN_WEAR_OFF Your stun attack's effect wears off and the monster can act again.
 STUN_WEAR_OFF The monster breaks out of his stunned state.
 STUN_WEAR_OFF The monster is freed from being stunned.
 STUN_WEAR_OFF The monster isn't stunned anymore and can move again.
+STUN_WEAR_OFF The monster's no longer dazed.
 
 FIREBALL_ATTEMPT You throw a fireball at the monster.
 FIREBALL_ATTEMPT You make a fireball and shoot it at the monster.
@@ -149,6 +166,7 @@ FROSTBITE_CURE Your use of the fireball skill has cured you of frostbite.
 FROSTBITE_CURE Because you used fireball, you no longer have frostbite.
 FROSTBITE_CURE The warmth from the fireball has removed your frostbite ailment.
 FROSTBITE_CURE The heat from that fireball takes away your frostbite.
+FROSTBITE_CURE Using fireball has removed your frostbite.
 
 SKILL_FAIL You can't skill___ now.
 SKILL_FAIL You aren't able to use your skill___ skill now.
@@ -247,6 +265,13 @@ PLAYER_DEFEATED With this attack, the monster is victorious.
 PLAYER_DEFEATED With that attack, the monster is victorious.
 PLAYER_DEFEATED With this attack, your life has ended.
 PLAYER_DEFEATED The monster has killed you.
+
+FROSTBITE_DEFEAT The frostbite damage defeats you.
+FROSTBITE_DEFEAT The frostbite damage kills you.
+FROSTBITE_DEFEAT The damage from frostbite makes you fall defeated to the ground.
+FROSTBITE_DEFEAT The monster's frostbite has killed you.
+FROSTBITE_DEFEAT That frostbite damage is enough to defeat you.
+FROSTBITE_DEFEAT With that frostbite damage, your life has ended.
 
 MONSTER_ICESHARDS He shoots some gigantic shards of ice at you.
 MONSTER_ICESHARDS He conjures a few large ice chunks and hurls them toward you.
@@ -530,3 +555,10 @@ GENERAL_QUESTION What do you do next?
 GENERAL_QUESTION What is your next move?
 GENERAL_QUESTION What action do you take next?
 GENERAL_QUESTION What will you do next?
+
+GAME_COMPLETED Congratulations! You escaped the dungeon.
+GAME_COMPLETED You've reached the exit of the dungeon.
+GAME_COMPLETED You've found the dungeon's exit.
+GAME_COMPLETED Congratulations! You've found the exit of the dungeon.
+GAME_COMPLETED You've escaped the dungeon and completed the game.
+GAME_COMPLETED Congratulations! You've reached the end of the dungeon.
