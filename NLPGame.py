@@ -2282,14 +2282,21 @@ class Game:
                         #print("Dodge. No damage taken")
                         generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'PLAYER_NOT_HIT', '?', 1)
                         generated_sentence = generated_sentence.replace("monster_type___", monster.mType)
-                        print(generated_sentence)
-                        generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'MONSTER_LEARNING', '.', 2)
-                        print(generated_sentence)                        
+                        print(generated_sentence)                                            
                         #print("Boss is learning your dodging")
-                        self.player.dodge -= 0.05
-                            
-                        if self.player.dodge == 0:
-                            print("Can't dodge now. Boss has learned your moves and can predict how you dodge.")
+                        if self.difficulty == "Hard":
+                            self.player.dodge -= 0.10
+                        else:
+                            self.player.dodge -= 0.05 
+                        if self.player.dodge <= 0:                       
+                            self.player.dodge = 0
+                            generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'MONSTER_LEARNED', '.', 2)
+                            print(generated_sentence)
+                            #print("Can't dodge now. Boss has learned your moves and can predict how you dodge.")
+                        else:                            
+                            generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'MONSTER_LEARNING', '.', 2)
+                            print(generated_sentence)  
+                        
                     else:
                         activeAbilities = ["attack"]
                         probAbilities = [1]
@@ -2356,8 +2363,9 @@ class Game:
                             enemyDamage = random.randint(monsterAbilities[1].minDamage*2, monsterAbilities[1].maxDamage*2)
                             #print("Enemy Damage:",enemyDamage)
                             self.player.health -= enemyDamage
-                            
-                            print("Got hit by an ice attack. Now you have frostbite")
+                            generated_sentence = self.sentence_gen_six(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, sixgrams_dict, N, V, 'MONSTER_FROSTBITE_HIT', '.', 1)
+                            print(generated_sentence)
+                            #print("Got hit by an ice attack. Now you have frostbite")
                             if self.difficulty == "Hard":
                                 frostbiteDamage = random.randint(int(monsterAbilities[1].minDamage*2), int(monsterAbilities[1].maxDamage*2)) 
                             else:
@@ -2668,7 +2676,9 @@ class Game:
             self.hard_mode_changes()
         
         print("\n")
-        print("Welcome to the game. Your goal is to escape the dungeon.")
+        generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'WELCOME', '.', 2)
+        print(generated_sentence)
+        #print("Welcome to the game. Your goal is to escape the dungeon.")
         generated_sentence = self.sentence_gen_five(unigrams_dict, bigrams_dict, trigrams_dict, fourgrams_dict, fivegrams_dict, N, V, 'GAME_START', '.', 1)
         print(generated_sentence)
         self.state = "Move"
