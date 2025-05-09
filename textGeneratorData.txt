@@ -7,6 +7,13 @@ INAPPROPRIATE This action is irrelevant to the current scenario. Please try agai
 INAPPROPRIATE That is not a valid action for this situation. Please try a different action by entering another input.
 INAPPROPRIATE That isn't an appropriate action to take at the moment. Please try again using a different input.
 
+WELCOME Welcome to the game. Your goal is to escape the dungeon.
+WELCOME Welcome to the game. Your objective is to escape the dungeon.
+WELCOME Welcome to the game. Your goal is escaping the dungeon.
+WELCOME Welcome to the game. Your objective is escaping the dungeon.
+WELCOME Welcome to the game. Your goal is to leave the dungeon.
+WELCOME Welcome to the game. Your objective is to leave the dungeon.
+
 GAME_START You've woken up in an empty room with only your sword, a map, an empty bag, and clothing that does not offer any extra protection from attacks. Where do you go? What do you do?
 GAME_START You wake up in an empty room, and you only have your sword, a map, an empty bag, and clothing that doesn't confer any defensive advantages. Where do you go? What do you do?
 GAME_START You awaken in an empty chamber and the only things you have are your sword, a map, an empty bag, and clothing that won't give you extra protection from attacks. Where do you go? What do you do?
@@ -283,7 +290,15 @@ MONSTER_FROSTBITE He tries to give you frostbite with his next attack.
 MONSTER_FROSTBITE He is so angry at you that he intends to give you frostbite.
 MONSTER_FROSTBITE He hates you so much that he thinks you deserve to have frostbite.
 MONSTER_FROSTBITE He is furious and gets the idea to afflict you with frostbite.
-MONSTER_FROSTBITE He uses an ice attack on you in order to give you frostbite.
+MONSTER_FROSTBITE He aims an ice attack at you in order to give you frostbite.
+MONSTER_FROSTBITE He prepares an ice attack, intending to inflict frostbite on you.
+
+MONSTER_FROSTBITE_HIT You get hit by the monster's ice attack, and now you have frostbite.
+MONSTER_FROSTBITE_HIT In the end, he successfully inflicts frostbite on you.
+MONSTER_FROSTBITE_HIT The monster's attack manages to inflict frostbite on you.
+MONSTER_FROSTBITE_HIT The monster's attack succeeds in giving you frostbite.
+MONSTER_FROSTBITE_HIT Unfortunately, the monster successfully inflicts frostbite on you.
+MONSTER_FROSTBITE_HIT Unfortunately, the monster manages to give you frostbite.
 
 MONSTER_LIFESTEAL For his next attack, he uses dark magic to steal health from you.
 MONSTER_LIFESTEAL He really hates you for that, and is even willing to use forbidden lifesteal magic on you.
@@ -296,6 +311,13 @@ MONSTER_LEARNING The Boss is observing your movements. His attacks will now be m
 MONSTER_LEARNING The Boss is irritated that his attack missed. He is learning your dodging so his future attacks are less likely to miss.
 MONSTER_LEARNING The Boss is figuring out your movements. Dodging his future attacks will be more challenging.
 MONSTER_LEARNING The Boss is learning your dodging. His attacks will now be harder to avoid.
+
+MONSTER_LEARNED You can't dodge anymore. The Boss has learned your moves and can predict how you dodge.
+MONSTER_LEARNED You won't be able to dodge anymore. The Boss has figured out your moves and can predict your dodges.
+MONSTER_LEARNED You can't dodge his attacks anymore. The Boss has learned your movement and can predict how you dodge.
+MONSTER_LEARNED You won't be dodging his attacks anymore. The Boss has figured out your movement and can predict your dodges.
+MONSTER_LEARNED Your attempts to dodge will no longer work. The Boss has learned your moves and can predict how you dodge.
+MONSTER_LEARNED You can't dodge anymore. The Boss has figured out your movement and can predict your dodges.
 
 MONSTER_DEFEATED You are able to kill the monster. He falls, letting you pass. You take a breather after this battle.
 MONSTER_DEFEATED The monster is killed. You can now pass. You take a breather after your battle.
