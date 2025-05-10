@@ -956,7 +956,7 @@ class Game:
         self.dungeon[3][3].contents.health = 100
         self.dungeon[1][4].contents.health = 110
         self.dungeon[4][2].contents.health = 80
-        self.dungeon[4][4].contents.health = 220
+        self.dungeon[4][4].contents.health = 255
     
     def generate_map(self):        
         generated_sentence = self.sentence_gen3(unigrams_dict, bigrams_dict, trigrams_dict, N, V, 'MAP')
